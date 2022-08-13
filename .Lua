@@ -34,7 +34,7 @@
 
     local Tabs = {
         Changelogs = Window:AddTab('Changelogs'), 
-        PSX = Window:AddTab('PSX'), 
+        PSX = Window:AddTab('Pet Simulator X'), 
         ['UI Settings'] = Window:AddTab('UI Settings'),
     }
     local LeftGroupBox = Tabs.Changelogs:AddLeftGroupbox('Changelogs')
@@ -42,6 +42,7 @@
     LeftGroupBox:AddLabel('🟢 Working! 🟡 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('---------------------------------')
     LeftGroupBox:AddLabel('Small Changes V5')
+    LeftGroupBox:AddLabel('(+) Also Made Pet Sim X Load Faster!')
     LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
