@@ -1,60 +1,21 @@
     -- DarkWare V5 ScriptHub Better Though
 
-    wait(0.8)
+    wait(0.3)
     game.StarterGui:SetCore("SendNotification",  {
     Title = "Notification";
     Text = "Dev V5.2 Premium";
     Icon = "rbxassetid://10550885987";
-    Duration = 10;
+    Duration = 2;
     Button1 = "Close";
     })
-    wait(0.4)
+    wait(0.1)
     game.StarterGui:SetCore("SendNotification",  {
     Title = "Notification";
     Text = "Finished Loading Darkware Premium";
     Icon = "rbxassetid://10550885987";
-    Duration = 12;
+    Duration = 3;
     Button1 = "Close";
     })
-
-    local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
-
-    local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
-    local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
-    local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
-    local Window = Library:CreateWindow({
-
-        Title = 'DarkWare V5 Premium!',
-        Center = true, 
-        AutoShow = true,
-    })
-
-
-    local Tabs = {
-        Changelogs = Window:AddTab('Changes'), 
-        PSX = Window:AddTab('PSX'), 
-        Bedwars = Window:AddTab('Bedwars'), 
-        MS2 = Window:AddTab('MS2'), 
-        BF = Window:AddTab('BloxFruit'), 
-        SH = Window:AddTab('ScriptHub'),
-        ScriptHub = Window:AddTab('Scripts'), 
-        ['Settings'] = Window:AddTab('Settings'),
-    }
-    local LeftGroupBox = Tabs.Changelogs:AddLeftGroupbox('Changelogs')
-    LeftGroupBox:AddLabel('For All The Scripts!')
-    LeftGroupBox:AddLabel('🟢 Working! 🟡 In Development 🔴 Patched!')
-    LeftGroupBox:AddLabel('---------------------------------')
-    LeftGroupBox:AddLabel('Small Changes V5')
-    LeftGroupBox:AddLabel('(+) New Notification and Premium Has 75% Of Updating :o')
-    LeftGroupBox:AddLabel('(+) Non Paid Version Has 25% Of Updating :(')
-    LeftGroupBox:AddLabel('(+) Adding UI Gone After Executing a Script (All)')
-    LeftGroupBox:AddLabel('(+) Made UI Gone After Executing a Script (PSX,Bedwars)')
-    LeftGroupBox:AddLabel('(+) Also Made More Notification When You Execute The script (PSX,Bedwars)')
-    LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
-    local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
-        setclipboard("https://discord.gg/kVVgyNNy")
-    end)
 
     if game.PlaceId == 6284583030 then
 
