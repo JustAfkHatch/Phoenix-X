@@ -1,9 +1,9 @@
     -- DarkWare V5 ScriptHub Better Though
 
-    wait(0.3)
+    wait(0.2)
     game.StarterGui:SetCore("SendNotification",  {
     Title = "Notification";
-    Text = "Dev V5.2 = Premium";
+    Text = "Version Is (5.3)";
     Icon = "rbxassetid://10550885987";
     Duration = 2;
     Button1 = "Close";
@@ -11,7 +11,7 @@
     wait(0.1)
     game.StarterGui:SetCore("SendNotification",  {
     Title = "Notification";
-    Text = "Finished Loading Darkware Premium";
+    Text = "Now Loading Darkware Premium!";
     Icon = "rbxassetid://10550885987";
     Duration = 3;
     Button1 = "Close";
@@ -42,7 +42,7 @@
     LeftGroupBox:AddLabel('🟢 Working! 🟡 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('---------------------------------')
     LeftGroupBox:AddLabel('Small Changes V5')
-    LeftGroupBox:AddLabel('(+) Also Made Pet Sim X Load Faster!')
+    LeftGroupBox:AddLabel('(+) Made All Scripts Load In Way Faster!')
     LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
@@ -268,6 +268,7 @@
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
 
+
     if game.PlaceId == 6872265039 then
 
         local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
@@ -365,6 +366,7 @@ end
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
     
+
     if game.PlaceId == 606849621 then  
 
         local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
