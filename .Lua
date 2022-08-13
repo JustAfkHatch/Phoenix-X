@@ -3,7 +3,7 @@
     wait(0.3)
     game.StarterGui:SetCore("SendNotification",  {
     Title = "Notification";
-    Text = "Dev V5.2 Premium";
+    Text = "Dev V5.2 = Premium";
     Icon = "rbxassetid://10550885987";
     Duration = 2;
     Button1 = "Close";
@@ -267,7 +267,6 @@
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-Library:Unload()
 
     if game.PlaceId == 6872265039 then
 
@@ -365,8 +364,7 @@ Library:Unload()
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-    Library:Unload()
-
+    
     if game.PlaceId == 606849621 then  
 
         local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
@@ -501,7 +499,7 @@ end
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-    Library:Unload()
+    
 
     if game.PlaceId == 9551640993 then  
 
@@ -632,7 +630,7 @@ end
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-    Library:Unload()
+    
 
     if game.PlaceId == 7560156054 then
 
@@ -746,7 +744,7 @@ end
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-    Library:Unload()
+    
 
     if game.PlaceId == 292439477 then
 
@@ -874,7 +872,7 @@ end
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-    Library:Unload()
+    
 
     if game.PlaceId == 286090429 then
 
@@ -1000,7 +998,7 @@ end
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-    Library:Unload()
+    
 
     if game.PlaceId == 2753915549 then
 
@@ -1318,7 +1316,7 @@ end
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-    Library:Unload()
+    
 
     if game.PlaceId == 3101667897 then
 
@@ -1417,7 +1415,7 @@ end
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-    Library:Unload()
+    
 
     if game.PlaceId == 10108131074 then
 
@@ -1495,7 +1493,7 @@ end
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-    Library:Unload()
+    
 
     if game.PlaceId == 537413528 then
 
@@ -1659,7 +1657,7 @@ end
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-    Library:Unload()
+    
 
     if game.PlaceId == 142823291 then
 
@@ -1745,7 +1743,7 @@ end
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-    Library:Unload()
+    
 
     if game.PlaceId == 3851622790 then
 
@@ -1852,7 +1850,7 @@ end
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-    Library:Unload()
+    
 
     if game.PlaceId == 2788229376 then
 
@@ -1879,7 +1877,7 @@ end
         LeftGroupBox:AddLabel('🟢 Working! 🟡 In Development 🔴 Patched!')
         LeftGroupBox:AddLabel('--------------------------------')
         LeftGroupBox:AddLabel('Small Changes V5')
-        LeftGroupBox:AddLabel('(+) Added 18 Da Hood Scripts No More!')
+        LeftGroupBox:AddLabel('(+) Added')
         LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
         local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
             game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
@@ -2027,4 +2025,3 @@ end
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-    Library:Unload()
