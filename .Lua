@@ -1,5 +1,4 @@
     -- DarkWare V5 ScriptHub Better Though
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/iqwg/ui/main/fps.lua"))()
 
     wait(0.2)
     game.StarterGui:SetCore("SendNotification",  {
