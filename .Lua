@@ -1,9 +1,9 @@
-    -- DarkWare V5 New Gui
+    -- DarkWare V5.3 New Gui
 
     wait(0.2)
     game.StarterGui:SetCore("SendNotification",  {
     Title = "Notification";
-    Text = "Version Is (5.3.2)";
+    Text = "Version Is (5.3.4";
     Icon = "rbxassetid://10550885987";
     Duration = 2;
     Button1 = "Close";
@@ -32,9 +32,9 @@
 
     local Tabs = {
         Changelogs = Window:AddTab('Changelogs'), 
-        PSX = Window:AddTab('Main'), 
+        PSX = Window:AddTab('Main Scripts!'), 
         BI = Window:AddTab('Break In Story'),
-        ['UI Settings'] = Window:AddTab('Settings'),
+        ['UI Settings'] = Window:AddTab('UI Settings'),
     }
     local LeftGroupBox = Tabs.Changelogs:AddLeftGroupbox('Changelogs')
     LeftGroupBox:AddLabel('For All The Scripts!')
@@ -53,8 +53,9 @@
             Library:Unload()
             wait(0.70)
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing TR1V5!", Icon = "rbxassetid://10550885987", Duration = 5})
-        wait(1)
+        wait(0.6)
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "TR1V5 Key Copied!", Icon = "rbxassetid://10550885987", Duration = 5})
+	wait(0.5)
         setclipboard("UwuuwlIIIIlIIIIl_6164871262816436247394884")
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/TR1V5/TR1V5-Software-V4/main/Games/Pet%20Simulator%20X"))()
     end)
@@ -66,6 +67,17 @@
         loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
     end)
     MyButton:AddTooltip('The 2nd Best Features For PSX')
+    local MyButton = LeftGroupBox:AddButton('🟢Huge Games', function()
+        Library:Unload()
+        wait(0.70)
+    game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Huge Games!", Icon = "rbxassetid://10550885987", Duration = 5})
+    getgenv().AuthKey="HUGE_wDp2O6304GTlCH0n"
+    getgenv().LoadSettings={
+    UseSeperateSaves=false
+    }
+    loadstring(game:HttpGet("https://HugeGames.io/script"))()
+end)
+    MyButton:AddTooltip('This Script Is So Op If you have premium Aka God Tier Features For PSX :0--')
     local MyButton = LeftGroupBox:AddButton('🟢HoHo Hub', function()
             Library:Unload()
             wait(0.70)
@@ -109,17 +121,10 @@
         loadstring(game:GetObjects("rbxassetid://8194485654")[1].Source)("Petsi-X")
     end)
     MyButton2:AddTooltip('A Working Script')
-    local MyButton = LeftGroupBox:AddButton('🟢Huge Games', function()
-            Library:Unload()
-            wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Huge Games!", Icon = "rbxassetid://10550885987", Duration = 5})
-        getgenv().AuthKey="HUGE_wDp2O6304GTlCH0n"
-        getgenv().LoadSettings={
-        UseSeperateSaves=false
-    }
-        loadstring(game:HttpGet("https://HugeGames.io/script"))()
+    local MyButton = LeftGroupBox:AddButton('🟢 RS HUB -- Key', function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MHD-444/RS-HUB/main/KEY%20SYS%22"))()
     end)
-    MyButton:AddTooltip('This Script Is So Op If you have premium Aka God Tier Features For PSX :0--')
+    MyButton:AddTooltip('I Dont Really Know If it Supports Hardcore!')
     local MyButton2 = MyButton:AddButton('🟢Void Hub', function()
             Library:Unload()
             wait(0.70)
@@ -1094,11 +1099,7 @@ Library:Unload()
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('--------------------------------')
     LeftGroupBox:AddLabel('Small Changes V5')
-    LeftGroupBox:AddLabel('(+) New Notification and Premium Has 75% Of Updating :o')
-    LeftGroupBox:AddLabel('(+) Non Paid Version Has 25% Of Updating :(')
-    LeftGroupBox:AddLabel('(+) Adding UI Gone After Executing a Script (All)')
-    LeftGroupBox:AddLabel('(+) Made UI Gone After Executing a Script (PSX,Bedwars)')
-    LeftGroupBox:AddLabel('(+) Also Made More Notification When You Execute The script (PSX,Bedwars)')
+    LeftGroupBox:AddLabel('(+) Added Wheat Hub')
     LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
@@ -1115,7 +1116,7 @@ Library:Unload()
         loadstring(game:HttpGet("https://soggyhubv2.vercel.app"))()
     end)
     MyButton:AddTooltip('Great Features')
-    local MyButton = LeftGroupBox:AddButton('🟢 PeepWare', function()
+    local MyButton = LeftGroupBox:AddButton('🟢 PeepWare -- Key', function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/NexIsHot/PeepWare/main/Login.lua"))()
     end)
     MyButton:AddTooltip('Great Features')
@@ -1124,8 +1125,14 @@ Library:Unload()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xandudiscord/vestra/main/loader.lua"))()
     end)
     MyButton:AddTooltip('Great Features')
-    local MyButton = LeftGroupBox:AddButton('🟢 Kaoru Hub', function()
-        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Uvxtq/lua/main/Loader.lua"))()
+    local MyButton = LeftGroupBox:AddButton('🟢Wheat Hub (New -- Key)', function()
+        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste The Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
+        setclipboard("https://discord.gg/wsbyxxCQuW")
+        loadstring(game:HttpGet("https://WheatHub.kelprepl.repl.co/main"))()
+    end)
+    MyButton:AddTooltip('Great Features')
+    local MyButton = LeftGroupBox:AddButton('🟢 Reddy Hub', function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/reddythedev/Reddy-Hub/main/_Loader'))()
     end)
     MyButton:AddTooltip('Great Features')
     local MyButton = LeftGroupBox:AddButton('🟢 Mint Hub', function()
@@ -1208,11 +1215,6 @@ Library:Unload()
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('--------------------------------')
     LeftGroupBox:AddLabel('Small Changes V5')
-    LeftGroupBox:AddLabel('(+) New Notification and Premium Has 75% Of Updating :o')
-    LeftGroupBox:AddLabel('(+) Non Paid Version Has 25% Of Updating :(')
-    LeftGroupBox:AddLabel('(+) Adding UI Gone After Executing a Script (All)')
-    LeftGroupBox:AddLabel('(+) Made UI Gone After Executing a Script (PSX,Bedwars)')
-    LeftGroupBox:AddLabel('(+) Also Made More Notification When You Execute The script (PSX,Bedwars)')
     LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
@@ -1336,13 +1338,13 @@ Library:Unload()
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('--------------------------------')
     LeftGroupBox:AddLabel('Small Changes V5')
-    LeftGroupBox:AddLabel('(+) Added A New Script')
+    LeftGroupBox:AddLabel('(+) Added Cerberus (New Script)')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
     end)
 
-    local LeftGroupBox = Tabs.Arsenal:AddLeftGroupbox('Arsenal/Phantom Forces And More')
+    local LeftGroupBox = Tabs.Arsenal:AddLeftGroupbox('Arsenal')
     local MyButton = LeftGroupBox:AddButton('🟢 Solaris Hub', function()
         loadstring(game:HttpGet('https://solarishub.net/script.lua',true))()
     end)
@@ -1354,7 +1356,11 @@ Library:Unload()
     local MyButton = LeftGroupBox:AddButton('🟢 Inno Hub (Op)', function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Innocentallity/Scripts/main/InnoHubNewerNewCauseSkids"))();
     end)
-    MyButton:AddTooltip('V3 Is Coming Out So Evo 2 Is Bad Right Now But You Can use it Still')
+    MyButton:AddTooltip('Very Op I think!')
+    local MyButton = LeftGroupBox:AddButton('🟢 RS HUB -- Key', function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MHD-444/RS-HUB/main/KEY%20SYS%22"))()
+    end)
+    MyButton:AddTooltip('Very Op I think!')
     local MyButton = LeftGroupBox:AddButton('🟢 TR1V5 Software', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "TR1V5 Key Copied!", Icon = "rbxassetid://10470552407", Duration = 5})
         setclipboard("UwuuwlIIIIlIIIIl_6164871262816436247394884")
@@ -1369,6 +1375,12 @@ Library:Unload()
         loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
     end)
     MyButton:AddTooltip('One Of The Best Scripts')
+    local MyButton = LeftGroupBox:AddButton('🟢 Cerberus (New Script)', function()
+        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste This Discord Server Into your Browser!", Icon = "rbxassetid://10550885987", Duration = 5})
+        setclipboard"https://discord.gg/jwxmTpzu6k"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/0xd5f/CERBERUS/main/CERBERUS.lua", true))()
+    end)
+    MyButton:AddTooltip('Almost The Same Features as all scripts')
     local MyButton = LeftGroupBox:AddButton('🟢 VG Hub', function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
     end)
@@ -1979,6 +1991,11 @@ Library:Unload()
     local MyButton = LeftGroupBox:AddButton('🟢Project Meow', function()
         loadstring(game:HttpGet"https://rawscripts.net/raw/Project-Meow_421")()
     end)
+    local MyButton = LeftGroupBox:AddButton('🟢Wheat Hub (New -- Key)', function()
+        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste The Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
+        setclipboard("https://discord.gg/wsbyxxCQuW")
+        loadstring(game:HttpGet("https://WheatHub.kelprepl.repl.co/main"))()
+    end)
     local MyButton = LeftGroupBox:AddButton('🟢Thunder Z', function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-05/HUB/main/Script"))()
     end)
@@ -2179,6 +2196,86 @@ Library:Unload()
 end
 Library:Unload()
 
+if game.PlaceId == 142823291 then
+
+    local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
+    
+    local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
+    local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
+    local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
+    local Window = Library:CreateWindow({
+
+        Title = 'Darkware -- Bee Swarm Simulator',
+        Center = true, 
+        AutoShow = true,
+    })
+
+
+    local Tabs = {
+        Changelogs = Window:AddTab('Changelogs'),
+        BSS = Window:AddTab('Bee Swarm Simulator'), 
+        ['UI Settings'] = Window:AddTab('UI Settings'),
+    }
+    local LeftGroupBox = Tabs.Changelogs:AddLeftGroupbox('---------- Changelogs -----------')
+    LeftGroupBox:AddLabel('For All The Scripts!')
+    LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
+    LeftGroupBox:AddLabel('--------------------------------')
+    LeftGroupBox:AddLabel('Small Changes V5')
+    LeftGroupBox:AddLabel('(+) New Section!')
+    LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
+    local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
+        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
+        setclipboard("https://discord.gg/kVVgyNNy")
+    end)
+    local LeftGroupBox = Tabs.BSS:AddLeftGroupbox('----- Bee Swarm Simulator -----')
+    local MyButton = LeftGroupBox:AddButton('🟢 Chocmoc', function()
+        loadstring(game:HttpGet("https://roblox.servegame.com/roblox_bss/chocmoc.lua"))()
+    end)
+    local MyButton = LeftGroupBox:AddButton('🟢 Kocmoc', function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxking776/kocmoc/main/kocmoc-remastered.lua"))()
+    end)
+    local MyButton = LeftGroupBox:AddButton('🟢 Pepsi Swarm', function()
+        loadstring(game:GetObjects("rbxassetid://4384103988")[0X1].Source)("Pepsi Swarm")
+    end)
+    local MyButton = LeftGroupBox:AddButton('🟢 Andromeda Hub', function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/max0mind/lua/main/loader.lua'))()
+    end)
+
+    -- Library functions
+    -- Sets the watermark visibility
+    Library:SetWatermarkVisibility(true)
+
+    -- Sets the watermark text
+    Library:SetWatermark('Darkware V5 Winning') -- Set WaterMark To Public If V5
+
+    Library.KeybindFrame.Visible = true; -- todo: add a function for this
+
+    Library:OnUnload(function()
+        Library.Unloaded = true
+    end)
+
+    local MenuGroup = Tabs['UI Settings']:AddLeftGroupbox('Menu')
+    MenuGroup:AddButton('Destroy Gui', function() Library:Unload() end)
+    MenuGroup:AddLabel('Menu KeyBind'):AddKeyPicker('MenuKeybind', { Default = 'E', NoUI = true, Text = 'Menu keybind' })
+
+    Library.ToggleKeybind = Options.MenuKeybind -- Allows you to have a custom keybind for the menu
+
+    ThemeManager:SetLibrary(Library)
+    SaveManager:SetLibrary(Library)
+
+    SaveManager:IgnoreThemeSettings() 
+
+    SaveManager:SetIgnoreIndexes({ 'MenuKeybind' }) 
+
+    ThemeManager:SetFolder('MyScriptHub')
+    SaveManager:SetFolder('MyScriptHub/specific-game')
+
+    SaveManager:BuildConfigSection(Tabs['UI Settings']) 
+
+    ThemeManager:ApplyToTab(Tabs['UI Settings'])
+end
+Library:Unload()
+
     if game.PlaceId == 3851622790 then
 
         local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
@@ -2311,7 +2408,6 @@ Library:Unload()
         LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
         LeftGroupBox:AddLabel('--------------------------------')
         LeftGroupBox:AddLabel('Small Changes V5')
-        LeftGroupBox:AddLabel('(+) Added')
         LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
         local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
             game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
