@@ -24,16 +24,16 @@
     local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
     local Window = Library:CreateWindow({
 
-        Title = 'Darkware -- Main Gui!',
+        Title = 'Darkware -- Main!',
         Center = true, 
         AutoShow = true,
     })
 
 
     local Tabs = {
-        Changelogs = Window:AddTab('Changes'), 
-        PSX = Window:AddTab('Pet Simulator X'), 
-        BI = Window:AddTab('Break In'),
+        Changelogs = Window:AddTab('Changelogs'), 
+        PSX = Window:AddTab('Main'), 
+        BI = Window:AddTab('Break In Story'),
         ['UI Settings'] = Window:AddTab('Settings'),
     }
     local LeftGroupBox = Tabs.Changelogs:AddLeftGroupbox('Changelogs')
@@ -441,7 +441,7 @@
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 
---Discontinued
+-- Discontinued Coming Back Soon Since it doesnt Work in hardcore :(
 
     local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
 
@@ -1336,10 +1336,7 @@ Library:Unload()
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('--------------------------------')
     LeftGroupBox:AddLabel('Small Changes V5')
-    LeftGroupBox:AddLabel('(+) New Notification and Premium Has 75% Of Updating :o')
-    LeftGroupBox:AddLabel('(+) Non Paid Version Has 25% Of Updating :(')
-    LeftGroupBox:AddLabel('(+) Made UI Gone After Executing a Script (PSX,Bedwars)')
-    LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
+    LeftGroupBox:AddLabel('(+) Added A New Script')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
@@ -1354,8 +1351,8 @@ Library:Unload()
         loadstring(game:HttpGet("https://darkhub.xyz/remote-script.lua", true))()
     end)
     MyButton:AddTooltip('One Of The Best Script Out Of All Scripts')
-    local MyButton = LeftGroupBox:AddButton('🟢 Projected Evo V2 Discontinued!', function()
-        
+    local MyButton = LeftGroupBox:AddButton('🟢 Inno Hub (Op)', function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Innocentallity/Scripts/main/InnoHubNewerNewCauseSkids"))();
     end)
     MyButton:AddTooltip('V3 Is Coming Out So Evo 2 Is Bad Right Now But You Can use it Still')
     local MyButton = LeftGroupBox:AddButton('🟢 TR1V5 Software', function()
