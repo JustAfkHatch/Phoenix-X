@@ -1,16 +1,16 @@
-    -- DarkWare V5.3 New Gui
+    -- DarkWare V5.1 New Gui
 
     wait(0.2)
     game.StarterGui:SetCore("SendNotification",  {
-    Title = "Notification";
-    Text = "Version Is (5.3.4";
+    Title = "A New Notification";
+    Text = "Version Is (5.1.4)";
     Icon = "rbxassetid://10550885987";
     Duration = 2;
     Button1 = "Close";
     })
     wait(0.1)
     game.StarterGui:SetCore("SendNotification",  {
-    Title = "Notification";
+    Title = "A New Notification";
     Text = "Now Loading Darkware Premium!";
     Icon = "rbxassetid://10550885987";
     Duration = 3;
