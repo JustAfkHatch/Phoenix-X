@@ -1,16 +1,16 @@
-    -- DarkWare V5.1 New Gui
+    -- DarkWare V5.3 New Gui
 
     wait(0.2)
     game.StarterGui:SetCore("SendNotification",  {
-    Title = "A New Notification";
-    Text = "Version Is (5.1.4)";
+    Title = "Notification";
+    Text = "Version Is (5.1.5)";
     Icon = "rbxassetid://10550885987";
     Duration = 2;
     Button1 = "Close";
     })
     wait(0.1)
     game.StarterGui:SetCore("SendNotification",  {
-    Title = "A New Notification";
+    Title = "Notification";
     Text = "Now Loading Darkware Premium!";
     Icon = "rbxassetid://10550885987";
     Duration = 3;
@@ -1995,6 +1995,9 @@ Library:Unload()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste The Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
         setclipboard("https://discord.gg/wsbyxxCQuW")
         loadstring(game:HttpGet("https://WheatHub.kelprepl.repl.co/main"))()
+    end)
+    local MyButton = LeftGroupBox:AddButton('🟢Sinx Hub', function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/AwokenYT/SinxHub/main/loader.lua')))()
     end)
     local MyButton = LeftGroupBox:AddButton('🟢Thunder Z', function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-05/HUB/main/Script"))()
