@@ -1,12 +1,12 @@
-    -- DarkWare V5.3 New Gui
+    -- DarkWare V5.1.6 DX
 
     wait(0.2)
     game.StarterGui:SetCore("SendNotification",  {
     Title = "Notification";
-    Text = "Version Is (5.1.5)";
+    Text = "Version Is (5.1.6 DX)";
     Icon = "rbxassetid://10550885987";
     Duration = 2;
-    Button1 = "Close";
+    Button1 = "Hi Bye";
     })
     wait(0.1)
     game.StarterGui:SetCore("SendNotification",  {
@@ -14,7 +14,7 @@
     Text = "Now Loading Darkware Premium!";
     Icon = "rbxassetid://10550885987";
     Duration = 3;
-    Button1 = "Close";
+    Button1 = "Hi Bye";
     })
 
     local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
@@ -24,7 +24,7 @@
     local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
     local Window = Library:CreateWindow({
 
-        Title = 'Darkware -- Main!',
+        Title = 'Darkware -- V5.1.6dx',
         Center = true, 
         AutoShow = true,
     })
@@ -33,6 +33,7 @@
     local Tabs = {
         Changelogs = Window:AddTab('Changelogs'), 
         PSX = Window:AddTab('Main Scripts!'), 
+        MRPSX = Window:AddTab('More Pet Sim X'),
         BI = Window:AddTab('Break In Story'),
         ['UI Settings'] = Window:AddTab('UI Settings'),
     }
@@ -209,13 +210,6 @@ end)
         loadstring(game:HttpGet('https://raw.githubusercontent.com/SmoxHub/SmoxHub-V2/main/SmoxHub-V2'))()
     end)
     MyButton:AddTooltip('No Key System And Works Great For PSX')
-    local MyButton2 = MyButton:AddButton('🟢 Proxo Hub', function()
-            Library:Unload()
-            wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Proxo Hub!", Icon = "rbxassetid://10550885987", Duration = 5})
-        loadstring(game:HttpGet"https://raw.githubusercontent.com/sinnx32/prx/main/Petsim")()
-    end)
-    MyButton2:AddTooltip('Might Removed This Script If Isnt Updating')
     local MyButton = LeftGroupBox:AddButton('🟢Ez Pet', function()
             Library:Unload()
             wait(0.70)
@@ -244,6 +238,21 @@ end)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Ultra-Hub/main/Main"))()
     end)
     MyButton2:AddTooltip('No Key System And Works Great For PSX')
+
+    local LeftGroupBox = Tabs.MRPSX:AddLeftGroupbox('------- Pet Simulator X ---------')
+    local MyButton = LeftGroupBox:AddButton('🟢 Proxo Hub', function()
+        Library:Unload()
+        wait(0.70)
+    game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Proxo Hub!", Icon = "rbxassetid://10550885987", Duration = 5})
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/sinnx32/prx/main/Petsim")()
+end)
+    local MyButton2 = MyButton:AddButton('🟢Galaxy Hub', function()
+    Library:Unload()
+    wait(0.70)
+    game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Galaxy Hub!", Icon = "rbxassetid://10550885987", Duration = 5})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MHD-444/Galaxy-Hub/main/Galaxy-Loader"))()
+    end)
+    MyButton2:AddTooltip('Key System and Unknown To Support PSX Hardcore')
 
     local LeftGroupBox = Tabs.PSX:AddLeftGroupbox('------------ Bedwars ------------')
 
