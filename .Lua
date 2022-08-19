@@ -1,9 +1,9 @@
-    -- DarkWare V1.1.7 B9
+    -- DarkWare V1.1.7 bx9
 
     wait(0.2)
     game.StarterGui:SetCore("SendNotification",  {
     Title = "Notification";
-    Text = "Version Is (1.1.7 B9)";
+    Text = "Version Is (1.1.7bx9)";
     Icon = "rbxassetid://10550885987";
     Duration = 2;
     Button1 = "Hi Bye";
