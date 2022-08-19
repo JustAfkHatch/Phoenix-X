@@ -1,9 +1,9 @@
-    -- DarkWare V5.1.6 DX
+    -- DarkWare V1.1.7 B9
 
     wait(0.2)
     game.StarterGui:SetCore("SendNotification",  {
     Title = "Notification";
-    Text = "Version Is (5.1.6 DX)";
+    Text = "Version Is (1.1.7 B9)";
     Icon = "rbxassetid://10550885987";
     Duration = 2;
     Button1 = "Hi Bye";
@@ -24,7 +24,7 @@
     local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
     local Window = Library:CreateWindow({
 
-        Title = 'Darkware -- V5.1.6dx',
+        Title = 'Darkware -- V1.1.7 B9',
         Center = true, 
         AutoShow = true,
     })
@@ -761,6 +761,13 @@ end)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
         MyButton2:AddTooltip('Updates More And Still has some better features coming soon aka Private Features')
     end)
+	    local MyButton2 = MyButton:AddButton('🟢 EngoWare', function()
+            Library:Unload()
+            wait(0.70)
+        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing EngoWare!", Icon = "rbxassetid://10550885987", Duration = 5})
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/joeengo/engoware/main/Main.lua"))()
+    end)
+    MyButton2:AddTooltip('Still Needs More Update to be good as Vape!')
     local MyButton = LeftGroupBox:AddButton('🟢 Inf Jump', function()
                 local InfiniteJumpEnabled = true
         game:GetService("UserInputService").JumpRequest:connect(function()
@@ -769,20 +776,13 @@ end)
             end
         end)
     end)
-    local MyButton2 = MyButton:AddButton('🟢 EngoWare', function()
-            Library:Unload()
-            wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing EngoWare!", Icon = "rbxassetid://10550885987", Duration = 5})
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/joeengo/engoware/main/Main.lua"))()
-    end)
-    MyButton2:AddTooltip('Still Needs More Update to be good as Vape!')
 
        -- Library functions
     -- Sets the watermark visibility
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V5 On Top') -- Set WaterMark To Public If V5
+    Library:SetWatermark('Darkware V1 Winning') -- Set WaterMark To Public If V5
 
     Library.KeybindFrame.Visible = true; -- todo: add a function for this
 
@@ -1347,13 +1347,17 @@ Library:Unload()
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('--------------------------------')
     LeftGroupBox:AddLabel('Small Changes V5')
-    LeftGroupBox:AddLabel('(+) Added Cerberus (New Script)')
+    LeftGroupBox:AddLabel('(+) Added Cerberus,Pwner Hub(New Scripts)')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
     end)
 
     local LeftGroupBox = Tabs.Arsenal:AddLeftGroupbox('Arsenal')
+	local MyButton = LeftGroupBox:AddButton('🟢 Pwner Hub V2', function()       
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/Pwner%20hub%20PC%20version.lua"), true))()
+    end)
+    MyButton:AddTooltip('I Think Its Op Af')
     local MyButton = LeftGroupBox:AddButton('🟢 Solaris Hub', function()
         loadstring(game:HttpGet('https://solarishub.net/script.lua',true))()
     end)
