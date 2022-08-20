@@ -24,7 +24,7 @@
     local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
     local Window = Library:CreateWindow({
 
-        Title = 'Darkware -- V1.1.7 B9',
+        Title = 'Darkware -- V1.1.8bx',
         Center = true, 
         AutoShow = true,
     })
@@ -32,7 +32,7 @@
 
     local Tabs = {
         Changelogs = Window:AddTab('Changelogs'), 
-        PSX = Window:AddTab('Main Scripts!'), 
+        PSX = Window:AddTab('Main Scripts'), 
         BI = Window:AddTab('Break In Story'),
         ['UI Settings'] = Window:AddTab('GUI Settings'),
     }
@@ -1964,12 +1964,7 @@ Library:Unload()
         LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
         LeftGroupBox:AddLabel('--------------------------------')
         LeftGroupBox:AddLabel('Small Changes V5')
-        LeftGroupBox:AddLabel('(+) New Notification and Premium Has 75% Of Updating :o')
-        LeftGroupBox:AddLabel('(+) Non Paid Version Has 25% Of Updating :(')
-        LeftGroupBox:AddLabel('(+) Sadly Some Script Will Fall off of the ScriptHub')
-        LeftGroupBox:AddLabel('(+) Will Add SubButtons Though')
-        LeftGroupBox:AddLabel('(+) Made UI Gone After Executing a Script (PSX,Bedwars)')
-        LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
+        LeftGroupBox:AddLabel('(+) Added 2 New Scripts Removed Not Working Ones')
         local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
             game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
             setclipboard("https://discord.gg/kVVgyNNy")
@@ -1989,13 +1984,16 @@ Library:Unload()
     local MyButton = LeftGroupBox:AddButton('🟢Project Meow', function()
         loadstring(game:HttpGet"https://rawscripts.net/raw/Project-Meow_421")()
     end)
+	    local MyButton = LeftGroupBox:AddButton('🟢Eclipse Hub', function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ethanoj1/Eclipse/main/Script.lua", true))()
+    end)
+	    local MyButton = LeftGroupBox:AddButton('🟢Pog Hub', function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/03koios/Loader/main/Loader.lua"))()
+    end)
     local MyButton = LeftGroupBox:AddButton('🟢Wheat Hub (New -- Key)', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste The Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
         setclipboard("https://discord.gg/wsbyxxCQuW")
         loadstring(game:HttpGet("https://WheatHub.kelprepl.repl.co/main"))()
-    end)
-    local MyButton = LeftGroupBox:AddButton('🟢Sinx Hub', function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/AwokenYT/SinxHub/main/loader.lua')))()
     end)
     local MyButton = LeftGroupBox:AddButton('🟢Thunder Z', function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-05/HUB/main/Script"))()
