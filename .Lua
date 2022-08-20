@@ -1184,6 +1184,103 @@ Library:Unload()
 end
 Library:Unload()
 
+if game.PlaceId == 9285238704 then
+
+    local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
+    
+    local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
+    local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
+    local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
+    local Window = Library:CreateWindow({
+
+        Title = 'Darkware -- Race Clicker Simulator!',
+        Center = true, 
+        AutoShow = true,
+    })
+
+
+    local Tabs = {
+        Changelogs = Window:AddTab('Changelogs'),
+        RCS = Window:AddTab('Race Clicker Simulator'), 
+        ['UI Settings'] = Window:AddTab('GUI Settings'),
+    }
+    local LeftGroupBox = Tabs.Changelogs:AddLeftGroupbox('---------- Changelogs -----------')
+    LeftGroupBox:AddLabel('For All The Scripts!')
+    LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
+    LeftGroupBox:AddLabel('--------------------------------')
+    LeftGroupBox:AddLabel('Small Changes V5')
+    LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
+    local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
+        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
+        setclipboard("https://discord.gg/kVVgyNNy")
+    end)
+	    local LeftGroupBox = Tabs.RCS:AddLeftGroupbox('Race Clicker Simulator')
+    local MyButton = LeftGroupBox:AddButton('🟢 Op Script', function()
+        wait(7)
+             for _, v in pairs(game.Workspace:GetDescendants()) do
+                  if v:IsA("TouchTransmitter") or v:IsA("TouchInterest") then
+                      firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart or game.Players.LocalPlayer.Character.Torso, v:FindFirstAncestorWhichIsA("Part"),0)
+                  end
+             end
+wait (.4)
+game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+    end)
+	MyButton:AddTooltip('Very Op 600 Wins Per!')
+	local MyButton = LeftGroupBox:AddButton('🟢 Ultra Hub', function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Ultra-Hub/main/Main"))()
+    end)
+	MyButton:AddTooltip('Has Auto Win')
+	local MyButton = LeftGroupBox:AddButton('🟢 ToraIsMe2 Gui', function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe2/ToraIsMe2/main/%40race", true))()
+    end)
+	MyButton:AddTooltip('Has Auto Click and Win')
+	local MyButton = LeftGroupBox:AddButton('🟢 Versus', function()
+	loadstring(game:HttpGet("https://gitlab.com/Ner0ox/versus/-/raw/main/LoaderV2/Loader.lua"))()
+    end)
+	MyButton:AddTooltip('500 Wins Per But Key!!')
+	local MyButton = LeftGroupBox:AddButton('🔴 Soon', function()
+			
+    end)
+	local MyButton = LeftGroupBox:AddButton('🔴 Soon', function()
+			
+    end)
+	local MyButton = LeftGroupBox:AddButton('🔴 Soon', function()
+			
+    end)
+                    -- Library functions
+    -- Sets the watermark visibility
+    Library:SetWatermarkVisibility(true)
+
+    -- Sets the watermark text
+    Library:SetWatermark('Darkware V5 On Top') -- Set WaterMark To Public If V5
+
+    Library.KeybindFrame.Visible = true; -- todo: add a function for this
+
+    Library:OnUnload(function()
+        Library.Unloaded = true
+    end)
+
+    local MenuGroup = Tabs['UI Settings']:AddLeftGroupbox('Menu')
+    MenuGroup:AddButton('Destroy Gui', function() Library:Unload() end)
+    MenuGroup:AddLabel('Menu KeyBind'):AddKeyPicker('MenuKeybind', { Default = 'E', NoUI = true, Text = 'Menu keybind' })
+
+    Library.ToggleKeybind = Options.MenuKeybind -- Allows you to have a custom keybind for the menu
+
+    ThemeManager:SetLibrary(Library)
+    SaveManager:SetLibrary(Library)
+
+    SaveManager:IgnoreThemeSettings() 
+
+    SaveManager:SetIgnoreIndexes({ 'MenuKeybind' }) 
+
+    ThemeManager:SetFolder('MyScriptHub')
+    SaveManager:SetFolder('MyScriptHub/specific-game')
+
+    SaveManager:BuildConfigSection(Tabs['UI Settings']) 
+
+    ThemeManager:ApplyToTab(Tabs['UI Settings'])
+end
+
     if game.PlaceId == 292439477 then
 
     local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
