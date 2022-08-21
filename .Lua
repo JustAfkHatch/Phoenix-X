@@ -1,9 +1,9 @@
-    -- DarkWare V1.1.7 bx9
+    -- DarkWare V1.1.8ab
 
     wait(0.2)
     game.StarterGui:SetCore("SendNotification",  {
     Title = "Notification";
-    Text = "Version Is (1.1.7bx9)";
+    Text = "Version Is (1.1.8ab)";
     Icon = "rbxassetid://10550885987";
     Duration = 2;
     Button1 = "Hi Bye";
@@ -11,7 +11,7 @@
     wait(0.1)
     game.StarterGui:SetCore("SendNotification",  {
     Title = "Notification";
-    Text = "Now Loading Darkware Premium!";
+    Text = "Now Loading Darkware";
     Icon = "rbxassetid://10550885987";
     Duration = 3;
     Button1 = "Hi Bye";
@@ -24,7 +24,7 @@
     local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
     local Window = Library:CreateWindow({
 
-        Title = 'Darkware -- V1.1.8bx',
+        Title = 'Darkware -- V1.1.8ab',
         Center = true, 
         AutoShow = true,
     })
@@ -1216,13 +1216,13 @@ if game.PlaceId == 9285238704 then
     end)
 	    local LeftGroupBox = Tabs.RCS:AddLeftGroupbox('Race Clicker Simulator')
     local MyButton = LeftGroupBox:AddButton('🟢 Op Script', function()
-        wait(7)
+        wait(0.1)
              for _, v in pairs(game.Workspace:GetDescendants()) do
                   if v:IsA("TouchTransmitter") or v:IsA("TouchInterest") then
                       firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart or game.Players.LocalPlayer.Character.Torso, v:FindFirstAncestorWhichIsA("Part"),0)
                   end
              end
-wait (.4)
+wait (0.1)
 game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
     end)
 	MyButton:AddTooltip('Very Op 600 Wins Per!')
@@ -1242,8 +1242,26 @@ game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Playe
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe2/ToraIsMe2/main/%40race", true))()
     end)
 	MyButton:AddTooltip('Has Auto Click and Win')
-	local MyButton = LeftGroupBox:AddButton('🔴 Soon', function()
-			
+	local MyButton = LeftGroupBox:AddButton('🟢 Zeerox Script', function()
+	local delay1 = 1
+	local delay2 = 0.1
+	local onlywhileround = true
+	--main
+	local plr = game:service'Players'.LocalPlayer
+	while task.wait() do
+    	pcall(function()
+        if plr.PlayerGui.UI_Main.UI.TopMenu.RaceTimer.TextLabel.Text == '' and onlywhileround then
+            repeat task.wait() until plr.PlayerGui.UI_Main.UI.TopMenu.RaceTimer.TextLabel.Text ~= ''
+            task.wait(1)
+        end
+        for i,v in pairs(workspace.Environment:GetDescendants()) do
+            if v:FindFirstChildWhichIsA'TouchTransmitter' then
+                firetouchinterest(v, plr.Character.HumanoidRootPart, 0)
+                task.wait((v.Parent.Name == 'Stage1K' and delay1) or delay2)
+            end
+        end
+    end)
+end
     end)
 	local MyButton = LeftGroupBox:AddButton('🔴 Soon', function()
 			
