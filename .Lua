@@ -1060,10 +1060,6 @@ end
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Innocentallity/Scripts/main/InnoHubNewerNewCauseSkids"))();
     end)
     MyButton:AddTooltip('Very Op I think!')
-    local MyButton = LeftGroupBox:AddButton('🟠🟡 Dev V1', function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAfkHatch/Arsenal-Dev-V1/main/.Lua",true))()
-    end)
-	MyButton:AddTooltip('Revamping IN PROGRESS')
 	local MyButton = LeftGroupBox:AddButton('🟢 Pwner Hub V2', function()       
 	loadstring(game:HttpGet(("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/Pwner%20hub%20PC%20version.lua"), true))()
     end)
