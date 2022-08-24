@@ -33,7 +33,7 @@
     local Tabs = {
         Changelogs = Window:AddTab('Changelogs'), 
         PSX = Window:AddTab('Main Scripts'), 
-	SH = Window:AddTab('ScriptHub'),
+	    SH = Window:AddTab('ScriptHub'),
         ['UI Settings'] = Window:AddTab('GUI Settings'),
     }
     local LeftGroupBox = Tabs.Changelogs:AddLeftGroupbox('Changelogs')
@@ -42,9 +42,8 @@
     LeftGroupBox:AddLabel('🟡 Buggy/Glitchy!')
     LeftGroupBox:AddLabel('---------------------------------')
     LeftGroupBox:AddLabel('Big Changes 1.1.9ab')
-    LeftGroupBox:AddLabel('(-) Race Clickers Gui')
     LeftGroupBox:AddLabel('(+) Rc = Race Clickers')
-    LeftGroupBox:AddLabel('(+) Added ScriptHub and Another Label')
+    LeftGroupBox:AddLabel('(+) Added ScriptHub')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10550885987", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
@@ -429,18 +428,10 @@ end
    local MyButton = LeftGroupBox:AddButton('🟢Race Clicker Gui', function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/DEV-TK02/Games/main/RaceClickers', true))()
    end)
-   local MyButton = LeftGroupBox:AddButton('🟢Versus', function()
-        loadstring(game:HttpGet("https://gitlab.com/Ner0ox/versus/-/raw/main/LoaderV2/Loader.lua"))()
-   end)
-   local MyButton = LeftGroupBox:AddButton('🔴Very Soon!', function()
-        
-   end)
-   local MyButton = LeftGroupBox:AddButton('🔴Very Soon!', function()
-        
-   end)
-   local MyButton = LeftGroupBox:AddButton('🔴Very Soon!', function()
-        
-   end)
+   local MyButton = LeftGroupBox:AddButton('🟢 Versus', function()
+	loadstring(game:HttpGet("https://gitlab.com/Ner0ox/versus/-/raw/main/LoaderV2/Loader.lua"))()
+    end)
+	MyButton:AddTooltip('500 Wins Per But Key!!')
     local RightGroupBox = Tabs.SH:AddRightGroupbox('------------ Break In -----------')
     local MyButton = RightGroupBox:AddButton('🟠TR1V5 Software', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "TR1V5 Key Copied!", Icon = "rbxassetid://10470552407", Duration = 5})
