@@ -39,9 +39,11 @@
     local LeftGroupBox = Tabs.Changelogs:AddLeftGroupbox('Changelogs')
     LeftGroupBox:AddLabel('For All The Scripts!')
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
+    LeftGroupBox:AddLabel('🟡 Buggy/Glitchy!')
     LeftGroupBox:AddLabel('---------------------------------')
     LeftGroupBox:AddLabel('Big Changes 1.1.9ab')
-    LeftGroupBox:AddLabel('(+) Added ScriptHub (Moved Break In Into ScriptHub)')
+    LeftGroupBox:AddLabel('(+) Rc = Race Clickers')
+    LeftGroupBox:AddLabel('(+) Added ScriptHub and Another Label')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10550885987", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
@@ -373,32 +375,58 @@ end)
    local MyButton = LeftGroupBox:AddButton('🟢Krakin Hub', function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/scripter4863/KeySystem/main/KeySystem.lua"))()
    end)
-   local MyButton = LeftGroupBox:AddButton('🔴Very Soon!', function()
-        
+   local MyButton = LeftGroupBox:AddButton('🟢(OP) Race Clicker', function()
+    wait(0.1)
+    for _, v in pairs(game.Workspace:GetDescendants()) do
+         if v:IsA("TouchTransmitter") or v:IsA("TouchInterest") then
+             firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart or game.Players.LocalPlayer.Character.Torso, v:FindFirstAncestorWhichIsA("Part"),0)
+         end
+    end
+    wait (0.1)
+    game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
    end)
-   local MyButton = LeftGroupBox:AddButton('🔴Very Soon!', function()
-        
+   local MyButton = LeftGroupBox:AddButton('🟢Rolly Hub (Rc)', function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/XRoLLu/Rolly_Hub/main/open-source-trash-loader.exe.yeah"))()
    end)
-   local MyButton = LeftGroupBox:AddButton('🔴Very Soon!', function()
-        
+   local MyButton = LeftGroupBox:AddButton('🟢Smox Hub (Rc)', function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SmoxHub/SmoxHub/main/SmoxHub"))()
    end)
-   local MyButton = LeftGroupBox:AddButton('🔴Very Soon!', function()
-        
+   local MyButton = LeftGroupBox:AddButton('🟢Galaxy Hub🌌 (Rc)', function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MHD-444/Galaxy-Hub/main/Galaxy-Loader", true))()
    end)
-   local MyButton = LeftGroupBox:AddButton('🔴Very Soon!', function()
-        
+   local MyButton = LeftGroupBox:AddButton('🟢Zeerox AutoWin (Rc)', function()
+        --settings (make first two values values bigger if script often bugs for you)
+local delay1 = 1
+local delay2 = 0.1
+local onlywhileround = true
+--main
+local plr = game:service'Players'.LocalPlayer
+while task.wait() do
+    pcall(function()
+        if plr.PlayerGui.UI_Main.UI.TopMenu.RaceTimer.TextLabel.Text == '' and onlywhileround then
+            repeat task.wait() until plr.PlayerGui.UI_Main.UI.TopMenu.RaceTimer.TextLabel.Text ~= ''
+            task.wait(1)
+        end
+        for i,v in pairs(workspace.Environment:GetDescendants()) do
+            if v:FindFirstChildWhichIsA'TouchTransmitter' then
+                firetouchinterest(v, plr.Character.HumanoidRootPart, 0)
+                task.wait((v.Parent.Name == 'Stage1K' and delay1) or delay2)
+            end
+        end
+    end)
+end
    end)
-   local MyButton = LeftGroupBox:AddButton('🔴Very Soon!', function()
-        
+   local MyButton = LeftGroupBox:AddButton('🟢Race Clicker Gui', function()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/CheapeeWastaken/Lazium/main/TheMain")()
    end)
-   local MyButton = LeftGroupBox:AddButton('🔴Very Soon!', function()
-        
+   local MyButton = LeftGroupBox:AddButton('🟢Ultra Hub', function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Ultra-Hub/main/Main"))()
    end)
-   local MyButton = LeftGroupBox:AddButton('🔴Very Soon!', function()
-        
+   local MyButton = LeftGroupBox:AddButton('🟢Strike Hub', function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/DEV-TK02/StrikeHub/main/Loader', true))()
    end)
-   local MyButton = LeftGroupBox:AddButton('🔴Very Soon!', function()
-        
+   local MyButton = LeftGroupBox:AddButton('🟢Race Clicker Gui', function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/DEV-TK02/Games/main/RaceClickers', true))()
    end)
    local MyButton = LeftGroupBox:AddButton('🔴Very Soon!', function()
         
