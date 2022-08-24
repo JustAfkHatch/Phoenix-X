@@ -629,7 +629,6 @@ end
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-Library:Unload()
 
     if game.PlaceId == 9551640993 then  
 
@@ -767,7 +766,6 @@ Library:Unload()
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-Library:Unload()
 
     if game.PlaceId == 7560156054 then
 
@@ -883,7 +881,6 @@ Library:Unload()
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-Library:Unload()
 
     if game.PlaceId == 292439477 then
 
@@ -1006,7 +1003,6 @@ Library:Unload()
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-Library:Unload()
 
     if game.PlaceId == 286090429 then
 
@@ -1143,7 +1139,6 @@ Library:Unload()
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-Library:Unload()
 
     if game.PlaceId == 2753915549 then
 
@@ -1461,7 +1456,6 @@ Library:Unload()
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-Library:Unload()
 
     if game.PlaceId == 3101667897 then
 
@@ -1638,7 +1632,6 @@ end
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-Library:Unload()
 
     if game.PlaceId == 537413528 then
 
@@ -1808,7 +1801,6 @@ Library:Unload()
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-Library:Unload()
 
     if game.PlaceId == 142823291 then
 
@@ -1894,7 +1886,6 @@ Library:Unload()
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-Library:Unload()
 
 if game.PlaceId == 142823291 then
 
@@ -1974,114 +1965,6 @@ if game.PlaceId == 142823291 then
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-Library:Unload()
-
-    if game.PlaceId == 3851622790 then
-
-        local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
-        
-        local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
-        local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
-        local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
-        local Window = Library:CreateWindow({
-    
-            Title = 'Darkware -- Break In',
-            Center = true, 
-            AutoShow = true,
-        })
-    
-    
-        local Tabs = {
-            Changelogs = Window:AddTab('Changelogs'),
-            BreakIn = Window:AddTab('Break In'), 
-            ['UI Settings'] = Window:AddTab('UI Settings'),
-        }
-        local LeftGroupBox = Tabs.Changelogs:AddLeftGroupbox('---------- Changelogs -----------')
-        LeftGroupBox:AddLabel('For All The Scripts!')
-        LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
-        LeftGroupBox:AddLabel('--------------------------------')
-        LeftGroupBox:AddLabel('Small Changes V5')
-        LeftGroupBox:AddLabel('(+) New Notification and Premium Has 75% Of Updating :o')
-        LeftGroupBox:AddLabel('(+) Non Paid Version Has 25% Of Updating :(')
-        LeftGroupBox:AddLabel('(+) Sadly Some Script Will Fall off of the ScriptHub')
-        LeftGroupBox:AddLabel('(+) Will Add SubButtons Though')
-        LeftGroupBox:AddLabel('(+) Made UI Gone After Executing a Script (PSX,Bedwars)')
-        LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
-        local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
-            game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
-            setclipboard("https://discord.gg/kVVgyNNy")
-        end)
-
-    local LeftGroupBox = Tabs.BreakIn:AddLeftGroupbox('------------ Break In -----------')
-    local MyButton = LeftGroupBox:AddButton('🟢TR1V5 Software', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "TR1V5 Key Copied!", Icon = "rbxassetid://10470552407", Duration = 5})
-        setclipboard("UwuuwlIIIIlIIIIl_6164871262816436247394884")
-        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/TR1V5/TR1V5-Software-V4/main/Main"))()
-    end)
-    local MyButton = LeftGroupBox:AddButton('🟢VG Hub', function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-    end)
-    local MyButton = LeftGroupBox:AddButton('🟢Proxima Hub', function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
-    end)
-    local MyButton = LeftGroupBox:AddButton('🟢Sigma', function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/boomcacas/SigmaY/main/BreakIn"))()
-    end)
-    local MyButton = LeftGroupBox:AddButton('🟢X Hub', function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/XHub/main/HubLoader.lua", true))()
-    end)
-    local MyButton = LeftGroupBox:AddButton('🟢HoHo Hub', function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
-    end)
-    local MyButton = LeftGroupBox:AddButton('🟢Green Gui', function()
-        loadstring(game:HttpGet(("https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/BreakInStory.lua")))()
-    end)
-    local MyButton = LeftGroupBox:AddButton('🟢Plasma Hub', function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/RubyBoo4life/Scripts/main/LOADER.vis'))()
-    end)
-    local MyButton = LeftGroupBox:AddButton('🟢Sorky Hub', function()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/MHx8q6xP'),true))()
-    end)
-    local MyButton = LeftGroupBox:AddButton('🟢Orange Gui', function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/RubyBoo4life/break-in-v1/main/.gitignore"))();
-    end)
-    local MyButton = LeftGroupBox:AddButton('🟢Red Gui', function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nikita365/Break-In-Story-/main/Break%20In%20Story%20Hub"))()
-    end)
-    -- Library functions
-    -- Sets the watermark visibility
-    Library:SetWatermarkVisibility(true)
-
-    -- Sets the watermark text
-    Library:SetWatermark('Darkware V5 On Top') -- Set WaterMark To Public If V5
-
-    Library.KeybindFrame.Visible = true; -- todo: add a function for this
-
-    Library:OnUnload(function()
-        Library.Unloaded = true
-    end)
-
-    local MenuGroup = Tabs['UI Settings']:AddLeftGroupbox('Menu')
-    MenuGroup:AddButton('Destroy Gui', function() Library:Unload() end)
-    MenuGroup:AddLabel('Menu KeyBind'):AddKeyPicker('MenuKeybind', { Default = 'E', NoUI = true, Text = 'Menu keybind' })
-
-    Library.ToggleKeybind = Options.MenuKeybind -- Allows you to have a custom keybind for the menu
-
-    ThemeManager:SetLibrary(Library)
-    SaveManager:SetLibrary(Library)
-
-    SaveManager:IgnoreThemeSettings() 
-
-    SaveManager:SetIgnoreIndexes({ 'MenuKeybind' }) 
-
-    ThemeManager:SetFolder('MyScriptHub')
-    SaveManager:SetFolder('MyScriptHub/specific-game')
-
-    SaveManager:BuildConfigSection(Tabs['UI Settings']) 
-
-    ThemeManager:ApplyToTab(Tabs['UI Settings'])
-end
-Library:Unload()
 
     if game.PlaceId == 2788229376 then
 
@@ -2255,4 +2138,3 @@ Library:Unload()
 
     ThemeManager:ApplyToTab(Tabs['UI Settings'])
 end
-Library:Unload()
