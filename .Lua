@@ -41,7 +41,7 @@
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('🟡 Buggy/Glitchy!')
     LeftGroupBox:AddLabel('---------------------------------')
-    LeftGroupBox:AddLabel('Big Changes 1.1.9ab')
+    LeftGroupBox:AddLabel('Small Changes 1.2ab')
     LeftGroupBox:AddLabel('(+) Rc = Race Clickers')
     LeftGroupBox:AddLabel('(+) Added Another script for Rc')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
