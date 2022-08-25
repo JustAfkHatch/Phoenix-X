@@ -1,21 +1,6 @@
     -- DarkWare V1.1.9ab
 
-    wait(0.2)
-    game.StarterGui:SetCore("SendNotification",  {
-    Title = "Notification";
-    Text = "Version Is (V1.2ab)";
-    Icon = "rbxassetid://10550885987";
-    Duration = 2;
-    Button1 = "Hi Bye";
-    })
-    wait(0.1)
-    game.StarterGui:SetCore("SendNotification",  {
-    Title = "Notification";
-    Text = "Now Loading Darkware";
-    Icon = "rbxassetid://10550885987";
-    Duration = 3;
-    Button1 = "Hi Bye";
-    })
+    repeat task.wait() until game:IsLoaded()
 
     local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
 
@@ -24,7 +9,7 @@
     local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
     local Window = Library:CreateWindow({
 
-        Title = 'Darkware -- V1.2ab',
+        Title = 'Darkware -- V1.2.1ab',
         Center = true, 
         AutoShow = true,
     })
@@ -32,8 +17,9 @@
 
     local Tabs = {
         Changelogs = Window:AddTab('Changelogs'), 
-        PSX = Window:AddTab('Main Scripts'), 
-	    SH = Window:AddTab('ScriptHub'),
+        PSX = Window:AddTab('Main Scripts'),
+	    SH = Window:AddTab('Script Hub'),
+	GH = Window:AddTab('Game Hub'),
         ['UI Settings'] = Window:AddTab('GUI Settings'),
     }
     local LeftGroupBox = Tabs.Changelogs:AddLeftGroupbox('Changelogs')
@@ -41,9 +27,10 @@
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('🟡 Buggy/Glitchy!')
     LeftGroupBox:AddLabel('---------------------------------')
-    LeftGroupBox:AddLabel('Small Changes 1.2ab')
-    LeftGroupBox:AddLabel('(+) Rc = Race Clickers')
-    LeftGroupBox:AddLabel('(+) Added Another script for Rc')
+    LeftGroupBox:AddLabel('Small Changes 1.2.1ab')
+        LeftGroupBox:AddLabel('(-) Removed The Notifications When Executing My Script')
+    LeftGroupBox:AddLabel('(+) Added GameHub')
+    LeftGroupBox:AddLabel('(+) Added Rainbow Friends')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10550885987", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
@@ -434,6 +421,14 @@ end
    local MyButton = LeftGroupBox:AddButton('🟢 Versus', function()
 	loadstring(game:HttpGet("https://gitlab.com/Ner0ox/versus/-/raw/main/LoaderV2/Loader.lua"))()
     end)
+LeftGroupBox:AddDivider()
+	local LeftGroupBox = Tabs.SH:AddLeftGroupbox('-------- Rainbow Friends --------')
+   local MyButton = LeftGroupBox:AddButton('🟢Kingdom Hub', function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/zReal-King/Rainbow-Friends/main/Main.lua'))()
+   end)
+   local MyButton = LeftGroupBox:AddButton('🟢Krakin Hub', function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/scripter4863/KeySystem/main/KeySystem.lua"))()
+   end)
 	MyButton:AddTooltip('500 Wins Per But Key!!')
     local RightGroupBox = Tabs.SH:AddRightGroupbox('------------ Break In -----------')
     local MyButton = RightGroupBox:AddButton('🟠TR1V5 Software', function()
@@ -471,14 +466,15 @@ end
     local MyButton = RightGroupBox:AddButton('🟢Red Gui', function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Nikita365/Break-In-Story-/main/Break%20In%20Story%20Hub"))()
     end)
+
+	local LeftGroupBox = Tabs.GH:AddLeftGroupbox('------------ Game Hub -----------')
+	
       -- Library functions
     -- Sets the watermark visibility
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V5 Winning') -- Set WaterMark To Public If V5
-
-    Library.KeybindFrame.Visible = true; -- todo: add a function for this
+    Library:SetWatermark('Darkware V1.2 Winning') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
