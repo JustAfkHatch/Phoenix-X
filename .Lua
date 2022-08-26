@@ -17,6 +17,7 @@
 
     local Tabs = {
         Changelogs = Window:AddTab('Changelogs'), 
+	Misc = Window:AddTab('Misc'),
         PSX = Window:AddTab('Main Scripts'),
 	    SH = Window:AddTab('Script Hub'),
 	GH = Window:AddTab('Game Hub'),
@@ -29,11 +30,33 @@
     LeftGroupBox:AddLabel('---------------------------------')
     LeftGroupBox:AddLabel('Small Changes 1.2.1ab')
         LeftGroupBox:AddLabel('(-) Removed The Notifications When Executing My Script')
-    LeftGroupBox:AddLabel('(+) Added GameHub')
-    LeftGroupBox:AddLabel('(+) Added Rainbow Friends')
+    LeftGroupBox:AddLabel('(+) Added Misc,Adding Scripts to GameHub Soon And ScriptHub')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10550885987", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
+    end)
+
+	local LeftGroupBox = Tabs.Misc:AddLeftGroupbox('------------- Misc -------------')
+	    local MyButton = LeftGroupBox:AddButton('🟢Inf Yield', function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",true))()
+    end)
+	    local MyButton = LeftGroupBox:AddButton('🟢Dark Dex', function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ImMejor35/RBLX_Scripts/main/Universal/FixedDarkDex"))()
+    end)
+	    local MyButton = LeftGroupBox:AddButton('🟢Reviz Admin', function()
+		 loadstring(game:HttpGet(('https://pastebin.com/raw/pyzjWNhk'),true))()
+    end)
+	    local MyButton = LeftGroupBox:AddButton('🟢Cmd X', function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+    end)
+	    local MyButton = LeftGroupBox:AddButton('🟢Fates Admin', function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
+    end)
+	    local MyButton = LeftGroupBox:AddButton('🟢R6 Admin', function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/CKbPg9NC", true))()
+    end)
+	    local MyButton = LeftGroupBox:AddButton('🟢Fe Animation (Useless But Cool)', function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/RubyBoo4life/Scripts/main/animations.vis'))()
     end)
     
     local LeftGroupBox = Tabs.PSX:AddLeftGroupbox('------- Pet Simulator X ---------')
