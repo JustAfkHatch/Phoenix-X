@@ -9,7 +9,7 @@
     local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
     local Window = Library:CreateWindow({
 
-        Title = 'Darkware -- V1.2.2ab',
+        Title = 'Darkware -- V1.2.5ab',
         Center = true, 
         AutoShow = true,
     })
@@ -28,8 +28,8 @@
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('🟡 Buggy/Glitchy!')
     LeftGroupBox:AddLabel('---------------------------------')
-    LeftGroupBox:AddLabel('Small Changes 1.2.2ab')
-    LeftGroupBox:AddLabel('(+) Fixes Coming Very Soon Bumping up to 1.2.5 :)')
+    LeftGroupBox:AddLabel('Small Changes 1.2.5ab')
+    LeftGroupBox:AddLabel('(+) Fixed Bugs!')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10550885987", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
@@ -86,6 +86,13 @@
     loadstring(game:HttpGet("https://HugeGames.io/script"))()
 end)
     MyButton:AddTooltip('This Script Is So Op If you have premium Aka God Tier Features For PSX :0--')
+    local MyButton = LeftGroupBox:AddButton('🟢Luna Hub', function()
+        Library:Unload()
+        wait(0.70)
+    game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Luna Hub!", Icon = "rbxassetid://10550885987", Duration = 5})
+	loadstring(game:HttpGetAsync("https://lunahub.cf/Loader.lua", true))()
+end)
+    MyButton:AddTooltip('This has premium for its script and you can get premium features')
     local MyButton = LeftGroupBox:AddButton('🟢HoHo Hub', function()
             Library:Unload()
             wait(0.70)
@@ -499,7 +506,7 @@ LeftGroupBox:AddDivider()
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V1.2 Winning') -- Set WaterMark To Public If V5
+    Library:SetWatermark('Darkware V1.2.5ab Winning') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -549,10 +556,7 @@ LeftGroupBox:AddDivider()
     LeftGroupBox:AddLabel('For All The Scripts!')
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('--------------------------------')
-    LeftGroupBox:AddLabel('Small Changes V5')
-        LeftGroupBox:AddLabel('(-) Removed Projected Evo V2 Discontinued!')
-    LeftGroupBox:AddLabel('(+) Project Evo 3 Coming soon!')
-    LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
+    LeftGroupBox:AddLabel('Small Changes V1')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
@@ -625,10 +629,8 @@ LeftGroupBox:AddDivider()
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V5 On Top') -- Set WaterMark To Public If V5
-
-    Library.KeybindFrame.Visible = true; -- todo: add a function for this
-
+    Library:SetWatermark('Darkware V1 On Top') -- Set WaterMark To Public If V5
+	
     Library:OnUnload(function()
         Library.Unloaded = true
     end)
@@ -678,9 +680,7 @@ end
     LeftGroupBox:AddLabel('For All The Scripts!')
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('--------------------------------')
-    LeftGroupBox:AddLabel('Small Changes V5')
-    LeftGroupBox:AddLabel('(+) Added Strike Hub')
-    LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
+    LeftGroupBox:AddLabel('Small Changes V1')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
@@ -762,9 +762,7 @@ end
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V5 On Top') -- Set WaterMark To Public If V5
-
-    Library.KeybindFrame.Visible = true; -- todo: add a function for this
+    Library:SetWatermark('Darkware V1 On Top') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -815,9 +813,8 @@ end
     LeftGroupBox:AddLabel('For All The Scripts!')
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('--------------------------------')
-    LeftGroupBox:AddLabel('Small Changes V5')
+    LeftGroupBox:AddLabel('Small Changes V1')
     LeftGroupBox:AddLabel('(+) Added Wheat Hub')
-    LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
@@ -877,9 +874,7 @@ end
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V5 On Top') -- Set WaterMark To Public If V5
-
-    Library.KeybindFrame.Visible = true; -- todo: add a function for this
+    Library:SetWatermark('Darkware V1 On Top') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -999,9 +994,7 @@ end
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V5 On Top') -- Set WaterMark To Public If V5
-
-    Library.KeybindFrame.Visible = true; -- todo: add a function for this
+    Library:SetWatermark('Darkware V1 On Top') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -1053,9 +1046,8 @@ end
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('🟡 Buggy/Glitchy/Crashes')
     LeftGroupBox:AddLabel('--------------------------------')
-    LeftGroupBox:AddLabel('Small Changes V5')
-    LeftGroupBox:AddLabel('(+) Added My Script And other Scripts')
-    LeftGroupBox:AddLabel('(+) Fixed Cerburus Discord Copy')
+    LeftGroupBox:AddLabel('Small Changes V1')
+    LeftGroupBox:AddLabel('(+) Added Luna Hub')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
@@ -1072,6 +1064,13 @@ end
         loadstring(game:HttpGet("https://raw.githubusercontent.com/CF-Trail/random/main/ArsenalGodmode.lua"))()
     end)
     MyButton:AddTooltip('Very OP')
+	    local MyButton = LeftGroupBox:AddButton('🟢Luna Hub', function()
+        Library:Unload()
+        wait(0.70)
+    game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Luna Hub!", Icon = "rbxassetid://10550885987", Duration = 5})
+	loadstring(game:HttpGetAsync("https://lunahub.cf/Loader.lua", true))()
+end)
+    MyButton:AddTooltip('This has premium for its script and you can get premium features')
     local MyButton = LeftGroupBox:AddButton('🟢 Solaris Hub', function()
         loadstring(game:HttpGet('https://solarishub.net/script.lua',true))()
     end)
@@ -1137,9 +1136,7 @@ end
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V5 On Top') -- Set WaterMark To Public If V5
-
-    Library.KeybindFrame.Visible = true; -- todo: add a function for this
+    Library:SetWatermark('Darkware V1 Arsenal') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -1190,8 +1187,8 @@ end
     LeftGroupBox:AddLabel('For All The Scripts!')
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('--------------------------------')
-    LeftGroupBox:AddLabel('Small Changes V5')
-    LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
+    LeftGroupBox:AddLabel('Small Changes V1')
+	    LeftGroupBox:AddLabel('No More Scripts For this sorry!')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
@@ -1449,9 +1446,7 @@ end
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V5 On Top') -- Set WaterMark To Public If V5
-
-    Library.KeybindFrame.Visible = true; -- todo: add a function for this
+    Library:SetWatermark('Darkware V1 BloxFruits') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -1502,7 +1497,7 @@ end
         LeftGroupBox:AddLabel('For All The Scripts!')
         LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
         LeftGroupBox:AddLabel('--------------------------------')
-        LeftGroupBox:AddLabel('Small Changes V5')
+        LeftGroupBox:AddLabel('Small Changes V1')
         LeftGroupBox:AddLabel('(+) Added 2 New Scripts Removed Not Working Ones')
         local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
             game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
@@ -1618,9 +1613,7 @@ end
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V5 On Top') -- Set WaterMark To Public If V5
-
-    Library.KeybindFrame.Visible = true; -- todo: add a function for this
+    Library:SetWatermark('Darkware V1 BABFT') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -1671,13 +1664,8 @@ end
         LeftGroupBox:AddLabel('For All The Scripts!')
         LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
         LeftGroupBox:AddLabel('--------------------------------')
-        LeftGroupBox:AddLabel('Small Changes V5')
-        LeftGroupBox:AddLabel('(+) New Notification and Premium Has 75% Of Updating :o')
-        LeftGroupBox:AddLabel('(+) Non Paid Version Has 25% Of Updating :(')
-        LeftGroupBox:AddLabel('(+) Sadly Some Script Will Fall off of the ScriptHub')
-        LeftGroupBox:AddLabel('(+) Will Add SubButtons Though')
-        LeftGroupBox:AddLabel('(+) Made UI Gone After Executing a Script (PSX,Bedwars)')
-        LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
+        LeftGroupBox:AddLabel('Small Changes V1')
+        LeftGroupBox:AddLabel('(+) ???')
         local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
             game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
             setclipboard("https://discord.gg/kVVgyNNy")
@@ -1703,9 +1691,7 @@ end
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V5 On Top') -- Set WaterMark To Public If V5
-
-    Library.KeybindFrame.Visible = true; -- todo: add a function for this
+    Library:SetWatermark('Darkware V1 Mm2') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -1756,7 +1742,7 @@ if game.PlaceId == 142823291 then
     LeftGroupBox:AddLabel('For All The Scripts!')
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('--------------------------------')
-    LeftGroupBox:AddLabel('Small Changes V5')
+    LeftGroupBox:AddLabel('Small Changes V1')
     LeftGroupBox:AddLabel('(+) New Section!')
     LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
@@ -1782,9 +1768,7 @@ if game.PlaceId == 142823291 then
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V5 Winning') -- Set WaterMark To Public If V5
-
-    Library.KeybindFrame.Visible = true; -- todo: add a function for this
+    Library:SetWatermark('Darkware V1 Bee Swarm Sim') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -1835,7 +1819,7 @@ end
         LeftGroupBox:AddLabel('For All The Scripts!')
         LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
         LeftGroupBox:AddLabel('--------------------------------')
-        LeftGroupBox:AddLabel('Small Changes V5')
+        LeftGroupBox:AddLabel('Small Changes V1')
         LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
         local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
             game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
@@ -1910,6 +1894,13 @@ end
     local MyButton = RightGroupBox:AddButton('🟢Faded', function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded/main/YesEpic", true))()
     end)
+	    local MyButton = RightGroupBox:AddButton('🟢Luna Hub', function()
+        Library:Unload()
+        wait(0.70)
+    game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Luna Hub!", Icon = "rbxassetid://10550885987", Duration = 5})
+	loadstring(game:HttpGetAsync("https://lunahub.cf/Loader.lua", true))()
+end)
+    MyButton:AddTooltip('This has premium for its script and you can get premium features')
     local MyButton = RightGroupBox:AddButton('🟢Hydraware', function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/freshlocaliar2mgiadawdpaklsd/Fortnite-Eating/main/HydrawareRelease.txt", true))()
     end)
@@ -1955,9 +1946,7 @@ end
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V5 Premium') -- Set WaterMark To Public If V5
-
-    Library.KeybindFrame.Visible = true; -- todo: add a function for this
+    Library:SetWatermark('Darkware V1 Da hood') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
