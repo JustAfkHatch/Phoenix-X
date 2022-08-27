@@ -1,4 +1,4 @@
-    -- DarkWare V1.2.2ab Updated 8/26/22
+    -- DarkWare V1.2.6ab Updated 8/27/22
 
     repeat task.wait() until game:IsLoaded()
 
@@ -9,7 +9,7 @@
     local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
     local Window = Library:CreateWindow({
 
-        Title = 'Darkware -- V1.2.5ab',
+        Title = 'Darkware -- V1.2.6ab',
         Center = true, 
         AutoShow = true,
     })
@@ -28,8 +28,9 @@
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('🟡 Buggy/Glitchy!')
     LeftGroupBox:AddLabel('---------------------------------')
-    LeftGroupBox:AddLabel('Small Changes 1.2.5ab')
+    LeftGroupBox:AddLabel('Small Changes 1.2.6ab')
     LeftGroupBox:AddLabel('(+) Fixed Bugs!')
+    LeftGroupBox:AddLabel('(+) Added UI Libraries in my discord server!!')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10550885987", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
@@ -506,7 +507,7 @@ LeftGroupBox:AddDivider()
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V1.2.5ab Winning') -- Set WaterMark To Public If V5
+    Library:SetWatermark('Darkware V1.2.6ab Winning') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
