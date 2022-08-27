@@ -1,4 +1,4 @@
-    -- DarkWare V1.1.9ab
+    -- DarkWare V1.2.2ab Updated 8/26/22
 
     repeat task.wait() until game:IsLoaded()
 
@@ -9,7 +9,7 @@
     local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
     local Window = Library:CreateWindow({
 
-        Title = 'Darkware -- V1.2.1ab',
+        Title = 'Darkware -- V1.2.2ab',
         Center = true, 
         AutoShow = true,
     })
@@ -28,15 +28,14 @@
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('🟡 Buggy/Glitchy!')
     LeftGroupBox:AddLabel('---------------------------------')
-    LeftGroupBox:AddLabel('Small Changes 1.2.1ab')
-        LeftGroupBox:AddLabel('(+) Added 2 new scripts!')
-    LeftGroupBox:AddLabel('(+) Added Misc,Adding Scripts to GameHub Soon And ScriptHub')
+    LeftGroupBox:AddLabel('Small Changes 1.2.2ab')
+    LeftGroupBox:AddLabel('(+) Fixes Coming Very Soon Bumping up to 1.2.5 :)')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10550885987", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
     end)
 
-	local LeftGroupBox = Tabs.Misc:AddLeftGroupbox('------------- Misc -------------')
+	local LeftGroupBox = Tabs.Misc:AddLeftGroupbox('------------- Misc --------------')
 	    local MyButton = LeftGroupBox:AddButton('🟢Inf Yield', function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",true))()
     end)
@@ -76,13 +75,6 @@
         loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
     end)
     MyButton:AddTooltip('The 2nd Best Features For PSX')
-        local MyButton = LeftGroupBox:AddButton('🟢Celestial Hub', function()
-            Library:Unload()
-            wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Celestial Hub!", Icon = "rbxassetid://10550885987", Duration = 5})
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/GameLoader"))()
-    end)
-    MyButton:AddTooltip('The 4th Best Features For PSX')
     local MyButton = LeftGroupBox:AddButton('🟢Huge Games', function()
         Library:Unload()
         wait(0.70)
@@ -498,9 +490,9 @@ LeftGroupBox:AddDivider()
     end)
 
 	local LeftGroupBox = Tabs.GH:AddLeftGroupbox('------------ Game Hub -----------')
-	local MyButton = RightGroupBox:AddButton('🟢One Punch Fighters Gui', function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/sooptest33/main/keyyone"))()
-	end
+	local MyButton = LeftGroupBox:AddButton('🟢One Punch Fighters Gui', function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/sooptest33/main/keyyone"))()
+	end)
 
       -- Library functions
     -- Sets the watermark visibility
