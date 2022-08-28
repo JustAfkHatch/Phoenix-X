@@ -1,6 +1,7 @@
     -- DarkWare V1.2.8ab Updated 8/28/22
 
     repeat task.wait() until game:IsLoaded()
+    local is_executor_closure = is_syn_closure or is_fluxus_closure or is_krnl_closure 
 
     local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
 
