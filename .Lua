@@ -1,4 +1,4 @@
-    -- DarkWare V1.2.6ab Updated 8/27/22
+    -- DarkWare V1.2.8ab Updated 8/28/22
 
     repeat task.wait() until game:IsLoaded()
 
@@ -9,7 +9,7 @@
     local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
     local Window = Library:CreateWindow({
 
-        Title = 'Darkware -- V1.2.6ab',
+        Title = 'Darkware -- V1.2.8ab',
         Center = true, 
         AutoShow = true,
     })
@@ -28,9 +28,9 @@
     LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
     LeftGroupBox:AddLabel('🟡 Buggy/Glitchy!')
     LeftGroupBox:AddLabel('---------------------------------')
-    LeftGroupBox:AddLabel('Huge Changes 1.2.6ab')
+    LeftGroupBox:AddLabel('Huge Changes 1.2.8ab')
     LeftGroupBox:AddLabel('(+) Added A Script (rc)')
-    LeftGroupBox:AddLabel('(+) Added UI Libraries Might have to double click to get it!')
+    LeftGroupBox:AddLabel('(+) Added UI Libraries, Might have to double click to get it!')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
         game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10550885987", Duration = 5})
         setclipboard("https://discord.gg/kVVgyNNy")
@@ -95,18 +95,604 @@
 		loadstring(game:HttpGet("https://garfieldscripts.xyz/ui-libs/flux-lib-example.lua",true))()
     end)
     local RightGroupBox = Tabs.Misc:AddRightGroupbox('---------- Universal ------------')
+    local MyButton = RightGroupBox:AddButton('🟢InfiniX Library', function()
+		local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/UI-th%20Library%20v0.1.2"))()
+
+    local window = Lib:CreateWindow("InfiniX.Lib")
+
+    local tab = window:CreateTab("Main")
+    local tabs = window:CreateTab("Properties")
+
+    tab:Search()
+
+    tab:CreateColor("Color Picker",function(color) print(color) end)
+
+    tab:CreateButton("Button", function () game:GetService("StarterGui"):SetCore("DevConsoleVisible",true) end)
+
+    tab:CreateToggle("Toggle/Checkbox",true,function(bool) print(bool) end)
+
+    tab:CreateTextbox("Textbox",function(text) print(text) end)
+
+    tab:CreateSlider("Slider", 0, 1000, function(value) print(value) end)
+
+    tab:CreateDropdown("Dropdown",{"Opt. 1"},function(option) print(option) end)
+        end)
+    local MyButton = RightGroupBox:AddButton('🟢Noob Hub Library', function()
+		local Config = {
+            WindowName = "NOOB HUB -- [  ]",
+            Color = Color3.fromRGB(0,183,255),
+            Keybind = Enum.KeyCode.RightControl
+        }
+        
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlexR32/Roblox/main/BracketV3.lua"))()
+        local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
+        
+        local Tab1 = Window:CreateTab("Main")
+        local Section1 = Tab1:CreateSection("Main")
+        local Label1 = Section1:CreateLabel("Credit : NOOB HUB")
+        local Label1 = Section1:CreateLabel("Discord : https://discord.gg/dY8rpSktyn")
+        local Button1 = Section1:CreateButton("Copy Discord", function()
+        setclipboard("https://discord.gg/dY8rpSktyn")
+        end)
+        local Button1 = Section1:CreateButton("Copy Youtube", function()
+        setclipboard("https://www.youtube.com/channel/UCpbG2pkTiPODfMOq_voRQDg/videos")
+        end)
+        local Tab1 = Window:CreateTab("Example")
+        local Tab2 = Window:CreateTab("UI Settings")
+        
+        local Section1 = Tab1:CreateSection("First Section")
+        local Section2 = Tab1:CreateSection("Second Section")
+        local Section3 = Tab2:CreateSection("Menu")
+        local Section4 = Tab2:CreateSection("Background")
+        
+        local Label1 = Section1:CreateLabel("Label 1")
+        Label1:UpdateText("lol")
+        -------------
+        local Button1 = Section1:CreateButton("Button 1", function()
+            print("Click Button 1")
+        end)
+        Button1:AddToolTip("Button 1 ToolTip")
+        -------------
+        local Toggle1 = Section1:CreateToggle("Toggle 1", nil, function(State)
+            print(State)
+        end)
+        Toggle1:AddToolTip("Toggle 1 ToolTip")
+        Toggle1:CreateKeybind("Y", function(Key)
+            print(Key)
+        end)
+        
+        local TextBox1 = Section1:CreateTextBox("TextBox 1", "Only numbers", true, function(Value)
+            print(Value)
+        end) 
+        TextBox1:AddToolTip("Yes only numbers")
+        TextBox1:SetValue("new value here")
+        Section1:CreateTextBox("TextBox 1\nMultiline", "numbers and letters", false, function(String)
+            print(String)
+        end)
+        -------------
+        local Slider1 = Section1:CreateSlider("Slider 1", 0,100,nil,true, function(Value)
+            print(Value)
+        end)
+        Slider1:AddToolTip("Slider 1 ToolTip")
+        Slider1:SetValue(50)
+        -------------
+        local Dropdown1 = Section1:CreateDropdown("Dropdown 1", {"Option 1","Option 2","Option 3"}, function(String)
+            print(String)
+        end)
+        Dropdown1:AddToolTip("Dropdown 1 ToolTip")
+        Dropdown1:SetOption("Option 1")
+        -------------
+        local Colorpicker1 = Section1:CreateColorpicker("Colorpicker 1", function(Color)
+            print(Color)
+        end)
+        Colorpicker1:AddToolTip("Colorpicker 1 ToolTip")
+        Colorpicker1:UpdateColor(Color3.fromRGB(255,0,0))
+        -------------
+        Section2:CreateLabel("Label 2\nMultiline")
+        -------------
+        local Button2 = Section2:CreateButton("Button 2\nMultiline", function()
+            print("Click Button 2")
+        end)
+        Button2:AddToolTip("Button 2 ToolTip\nMultiline")
+        -------------
+        local Toggle2 = Section2:CreateToggle("Toggle 2\nMultiline", nil, function(State)
+            print(State)
+        end)
+        Toggle2:AddToolTip("Toggle 2 ToolTip\nMultiline")
+        Toggle2:CreateKeybind("U", function(Key)
+            print(Key)
+        end)
+        -------------
+        local Slider2 = Section2:CreateSlider("Slider 2\nMultiline", 0,100,nil,false, function(Value)
+            print(Value)
+        end)
+        Slider2:AddToolTip("Slider 2 ToolTip\nMultiline")
+        Slider2:SetValue(25)
+        -------------
+        local Dropdown2 = Section2:CreateDropdown("Dropdown 2\nMultiline", {"Option 4","Option 5","Option 6"}, function(String)
+            print(String)
+        end)
+        Dropdown2:AddToolTip("Dropdown 2 ToolTip")
+        Dropdown2:SetOption("Option 6")
+        -------------
+        local Colorpicker2 = Section2:CreateColorpicker("Colorpicker 2\nMultiline", function(Color)
+            print(Color)
+        end)
+        Colorpicker2:AddToolTip("Colorpicker 2 ToolTip")
+        Colorpicker2:UpdateColor(Color3.fromRGB(0,0,255))
+        -------------
+        local Toggle3 = Section3:CreateToggle("UI Toggle", nil, function(State)
+            Window:Toggle(State)
+        end)
+        Toggle3:CreateKeybind(tostring(Config.Keybind):gsub("Enum.KeyCode.", ""), function(Key)
+            Config.Keybind = Enum.KeyCode[Key]
+        end)
+        Toggle3:SetState(true)
+    end)
+    local MyButton = RightGroupBox:AddButton('🟢Darkware Library', function()
+	local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Kavo-Ui/main/Darkrai%20Ui", true))()
+
+    local Library = DarkraiX:Window("Darkware","Game here!","",Enum.KeyCode.RightControl);
+
+    --[[
+    DarkraiX:Window(
+    1 = Name Of Your Ui Library (string)
+    2 = Game Name (You Can Keep This Empty To Get The Current Game Name!) (string)
+    3 = A Logo If You Have One! (string)
+    4 = Ui Library Toggle (I'll Not Prefer Touching It) (function)
+    );
+    ]]
+
+    Tab1 = Library:Tab("Main")
+
+    --[[
+    Library:Tab(
+    1 = Your Tab Name! (string)
+    )
+    ]]
+
+    Tab1:Button("hack account!",function()
+        print("hi")
+    end)
+
+    --[[
+    Tab1:Button(
+    1 = Button Name (string)
+    2 = callback (function)
+    ]]
+
+    Tab1:Toggle("Toggle",false,function(value)
+
+        end)
+
+    --[[
+    Tab1:Toggle(
+    1 = name (string)
+    2 = wether it should be true already or false (bool)
+    3 = callback (function)
+    )
+    ]]
+
+    Tab1:Slider("Slider",1,100,25,function(value)
+            print(value)
+        end)
+
+    --[[
+    Tab1:Slider(
+    1 = Name (string)
+    2 = Minimum (number)
+    3 = Maximum (number)
+    4 = Currently How Much (number)
+    )
+    ]]
+    Tab1:Dropdown("Dropdown",{"yo","sus","pro"},function(value)
+                print(value)
+    end)
+
+    --[[
+    Tab1:Dropdown(
+    1 = Name (string)
+    2 = Options (table)
+    )
+    ]]
+
+    Tab1:Textbox("Textbox","",true,function(value)
+    print(value)
+    end)
+
+    --[[
+    Tab1:Textbox(
+    1 = Name (string)
+    2 = Current Text (string)
+    3 = State (bool)
+    4 = callback (function)
+    )
+    ]]
+
+    Tab1:Line()
+    end)
+    local MyButton = RightGroupBox:AddButton('🟢Ocerium Library', function()
+	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/slf0Dev/Ocerium_Project/main/Library.lua"))()
+
+    Window = Library.Main("Darkware","LeftAlt") -- change "LeftAlt" to key that you want will hide gui
+
+    --//tab
+    local Tab = Window.NewTab("Aimbot")
+    local Tab = Window.NewTab("Visuals")
+    local Tab = Window.NewTab("Player")
+
+
+    --//section
+    local Section = Tab.NewSection("Dababy")
+    local Button = Section.NewButton("My cock is huge",function()
+        print("Dababy!")
+    end)
+
+    --//Toggles
+    local EnabledToggle = Section.NewToggle("Enabled Toggle",function(bool)
+    -- code here
+    end,true) -- "true" is the default value of toggle
+
+    local DisabledToggle = Section.NewToggle("Disabled Toggle",function(bool)
+    -- code here
+    end,false) -- "false" is the default value of toggle
+
+    -- Sliders
+    local SliderPrecise = section.NewSlider("Slider precise",0,100,true,function(value)
+
+    end,25)
+    local SliderNotPrecise = section.NewSlider("Slider not precise",0,100,false,function(value)
+
+    end,75)
+    end)
+    local MyButton = RightGroupBox:AddButton('🟢Center Hub Library', function()
+	local SimpleShindoUi = loadstring(game:HttpGet("https://raw.githubusercontent.com/naypramx/Ui__Project/Script/SimpleShindoUi"))()
+ 
+    local Main = SimpleShindoUi:new()
+    
+    local Tab = Main:Tap('Centerhub')
+    
+    local page = Tab:page()
+    
+    local Labelz = page:Label('Label!')
+    
+    page:Toggle('Toggle!',false,function(t)
+        print(t)
+    end)
+    page:Button('Button!',function()
+        print('t')
+    end)
+    page:Slider('Slider!',1,100,20,function(t)
+        print(t)
+    end)
+    local drope = page:drop('Dropdown!',"Nothings",false,{'DinoHub','CenterHub'},function(t)
+        print(t) -- ห้ามนำไปแจกต่อนะจ๊ะ XD
+    end)
+    
+    local page2 = Tab:page()
+    page2:Button('Clear Dropdown!',function()
+        drope:clear()
+    end)
+    page2:Button('Refresh Dropdown!',function()
+        drope:add({"Simple"}) -- มันทำไงวะ -- ห้ามนำไปแจกต่อนะจ๊ะ XD
+    end)
+    end)
+    local MyButton = RightGroupBox:AddButton('🟢Promixa Hub Library', function()
+		local VLib = loadstring(game:HttpGet("https://pastebin.com/raw/Mb49kKTP"))()
+
+
+		MAINTTL = "Darkware" 
+
+    local win = VLib:Window("THREE PIECE", Color3.fromRGB(196, 40, 28))
+
+    local ss1 = win:Tab("HOW TO USE")
+    local ss = win:Tab("MAIN")
+    local sss = win:Tab("MISC")
+    local cred = win:Tab("CREDITS")
+
+    ss1:Button("Destroy Gui",function()
+    game.CoreGui["Library"]:Destroy()
+    end)
+
+    local Npc_Table = {}     
+    for i,v in pairs(game:GetService("Workspace"):GetChildren()) do 
+        if v:IsA("Model") and v:FindFirstChild("NPC") and v:FindFirstChild("AttackScript") and not table.find(Npc_Table,v.Name) then
+            table.insert(Npc_Table,v.Name)
+        end 
+    end 
+
+        local tool_table = {}
+        for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+            if v:IsA("Tool") then
+                table.insert(tool_table, v.Name)
+            end
+        end
+        
+        distance = 5 
+        
+        
+        ss1:Label("You need to have a fruit inorder to hit mobs")
+        ss1:Label("Once you have a fruit auto equip it")
+        ss1:Label("then Spam Skills From Misc Tab")
+    
+    
+    ss:Dropdown("Select Tool",tool_table,function(SelectedOption)
+    SelectedWeapon = SelectedOption
+    end)
+        
+    ss:Toggle("AutoEquip",function(t)
+    Equip = t 
+        while wait() do 
+            if Equip then 
+            pcall(function()
+                for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                    if v.Name == SelectedWeapon then 
+                        game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+                    end 
+                    end
+                end)
+            end 
+        end 
+    end)  
+        
+    ss:Dropdown("Mobs To Farm",Npc_Table,function(t)
+    mobs = t     
+    end) 
+
+    ss:Toggle("Autofarm Start",function(t)
+        autofarm = t 
+        game:GetService("RunService").Stepped:Connect(function()
+        if autofarm then
+                        pcall(function()
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        end)
+    end
+    end)
+                    while autofarm do wait()
+                        pcall(
+                            function()
+                                for i, v in pairs(game:GetService("Workspace"):GetChildren()) do
+                                    if v.Name == mobs and v:FindFirstChild("HumanoidRootPart")and v:FindFirstChild("Humanoid") then
+                                    wait(.7)
+                                        repeat
+                                            wait()
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(v.HumanoidRootPart.Position + Vector3.new(0,distance,0),v.HumanoidRootPart.Position)
+                                        until v.Humanoid.Health <= 0  or autofarm == false 
+                                    end
+                                end
+                            end
+                        )
+                    end
+                
+    end) 
+
+    ss:Slider("Distance",-9,10,3,function(t)
+    distance = t     
+    end)
+    
+    ss:Toggle("AutoFarm Fruits",function(t)
+    fruits = t 
+    while fruits do wait() 
+        pcall(function()
+    for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+        if v:IsA("Tool") and v:FindFirstChild("EatScript") then 
+            firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Handle.TouchInterest.Parent, 0)
+                end 
+            end 
+        end)  
+    end 
+    end) 
+    
+
+    sss:Toggle("Spam C Skill",function(t)
+    skillsC = t 
+    while skillsC do wait() 
+        pcall(function()
+                local LP = game:GetService("Players").LocalPlayer
+                local VIM = game:GetService("VirtualInputManager")
+            VIM:SendKeyEvent(true, Enum.KeyCode.C, false, game)
+            end) 
+        end
+    end)
+                
+    sss:Toggle("Spam X Skill",function(t)
+    skillsX = t 
+    while skillsX do wait() 
+        pcall(function()
+                local LP = game:GetService("Players").LocalPlayer
+                local VIM = game:GetService("VirtualInputManager")
+            VIM:SendKeyEvent(true, Enum.KeyCode.X, false, game)
+            end)
+        end
+    end)
+                
+    sss:Toggle("Spam V Skill",function(t)
+    skillsV = t 
+        pcall(function()
+    while skillsV do wait() 
+                local LP = game:GetService("Players").LocalPlayer
+                local VIM = game:GetService("VirtualInputManager")
+            VIM:SendKeyEvent(true, Enum.KeyCode.V, false, game)
+            end 
+        end)
+    end)
+            
+    sss:Toggle("Spam E Skill",function(t)
+    skills = t 
+    while skills do wait() 
+        pcall(function()
+                local LP = game:GetService("Players").LocalPlayer
+                local VIM = game:GetService("VirtualInputManager")
+            VIM:SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        end)
+        end
+    end)
+            
+    sss:Toggle("Spam Z Skill",function(t)
+    skillsZ = t 
+    while skillsZ do wait() 
+        pcall(function()
+                local LP = game:GetService("Players").LocalPlayer
+                local VIM = game:GetService("VirtualInputManager")
+            VIM:SendKeyEvent(true, Enum.KeyCode.Z, false, game)
+            end)
+        end
+    end)
+
+    cred:Button("Copy Discord Server",function()
+    setclipboard("https://discord.gg/4KqkXRDdGE")
+    end) 
+
+    cred:Label("Made By JustAfkHatch")
+    end)
+    local MyButton = RightGroupBox:AddButton('🟢Nightmare Library', function()
+		local Fun = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/nightmares.fun-UI-Library/main/source.lua"))()
+
+    local window = Fun.Create("UI Library")
+
+    local tab = window:Tab("Leak")
+
+    local section = tab:Section("Showcase")
+
+    section:Toggle("Toggle", function(s)
+    print(s)
+    end)
+
+    section:Button("Button", function()
+    
+    end)
+
+    section:Label("Label")
+
+    section:KeyBind("KeyBind", Enum.KeyCode.E, function()
+    
+    end)
+
+    section:Slider("Slider", 16, 200, function()
+    
+    end)
+
+    section:Dropdown("Dropdown", {"1", "2", "3"}, function()
+    
+    end)
+
+    section:TextBox("Textbox", function()
+    
+    end)
+    end)
+    local MyButton = RightGroupBox:AddButton('🟢Pink Library', function()
+	local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/NiceBBMBThai12/NBTScript/main/UI-Library-Robloxx"))()
+    local window = library:Win()
+    local tap1 = window:addtap("Tab1")
+    local tap2 = window:addtap("Tab2")
+    local page1 = tap1:addpage()
+    local page2 = tap1:addpage()
+    local page3 = tap1:addpage()
+    local page4 = tap1:addpage()
+    page1:Ti("Title")
+    
+    page1:Toggle("Toggle1",nil, function(value)
+        print(value)
+    end)
+    
+    page1:Button("Button1", function(value)
+        print(value)
+    end)
+    
+    page1:Button1("Button2", function(value)
+        print(value)
+    end)
+    
+    local getdrop = page1:DropDown("Name DropDown","Name",{"a","b","c"}, function(value)
+        print(value)
+    end)
+    
+    local getlable = page1:Label("Text Label")
+    
+    local getslider = page1:Slder("Slider",1,100,8, function(value)
+        print(value)
+    end)
+    
+    page4:Ti("Title")
+    
+    page4:Toggle("Toggle1",nil, function(value)
+        print(value)
+    end)
+    
+    page4:Button("Button1", function(value)
+        print(value)
+    end)
+    
+    page4:Button1("Button2", function(value)
+        print(value)
+    end)
+    
+    local getdrop = page4:DropDown("Name DropDown","Name",{"a","b","c"}, function(value)
+        print(value)
+    end)
+    
+    local getlable = page4:Label("Text Label")
+    
+    local getslider = page4:Slder("Slider",1,100,8, function(value)
+        print(value)
+    end)
+    end)
+    local MyButton = RightGroupBox:AddButton('🟢Simple Hub Library', function()
+	local SimpleUi = loadstring(game:HttpGet("https://raw.githubusercontent.com/naypramx/Ui__Project/Script/SimpleUi"))()
+    local Main = SimpleUi:create('Leak by CenterHub')
+    local Menu = Main:Menu('Center')
+    local Page = Menu:Page()
+    Page:Label('Center Hub')
+    Page:Button('Button by Center',false,function()
+        print("CenterNo1ee")
+    end)
+    Page:Toggle('Toggle by Center',false,false,false,function(t) -- arg 1 Text , arg 2 ไม่รู้ , arg 3 เปิด - ปิด , arg 4 ไม่รู้ , arg 5 callback
+        print(t)
+    end)
+    Page:Button('Button by Center2',false,function()
+        print("CenterNo1")
+    end)
+    Page:Slider('Center Slider',1,10,5,function(x)
+        print(x)
+    end)
+    end)
+    MyButton:AddTooltip('Go to my discord to make your own!')
+    local MyButton = RightGroupBox:AddButton('🟢Simple UI Library', function()
+	local SimpleUi = loadstring(game:HttpGet("https://raw.githubusercontent.com/naypramx/Ui__Project/Script/Asss"))()
+    local Ui = SimpleUi:Win('Win!')
+    local Chanel = Ui:Channel('Tab!')
+    
+    local Page = Chanel:Addpage('This is Section!')
+    
+    Page:Button("Button!",function()
+        print('xa')
+    end)
+    Page:Toggle("Toggle!",false,function(t)
+        print(t)
+    end)
+    Page:slider("Slider!",1,5,2,function(t)
+        print(t)
+    end)
+    Page:Label('Label!')
+    Page:line() -- ห้ามนำไปแจกต่อนะจ๊ะ XD
+    end)
+    MyButton:AddTooltip('Go to my discord to make your own!')
     local MyButton = RightGroupBox:AddButton('🟢Discord Library', function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/UI-Librarys/main/Discord%20Lib",true))()
     end)
+    MyButton:AddTooltip('Go to my discord to make your own!')
     local MyButton = RightGroupBox:AddButton('🟢Twink Library', function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/UI-Librarys/main/TwinkLib",true))()
     end)
+    MyButton:AddTooltip('Go to my discord to make your own!')
     local MyButton = RightGroupBox:AddButton('🟢Youngstarts Library', function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/UI-Librarys/main/Youngstarts%20Ui%20Lib",true))()
     end)
+    MyButton:AddTooltip('Go to my discord to make your own!')
     local MyButton = RightGroupBox:AddButton('🟢Xanax Library', function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/UI-Librarys/main/Xanax%20UI%20Lib",true))()
     end)
+    MyButton:AddTooltip('Go to my discord to make your own!')
     RightGroupBox:AddDivider()
 	    local MyButton = RightGroupBox:AddButton('🟢Inf Yield', function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",true))()
@@ -114,20 +700,11 @@
 	    local MyButton = RightGroupBox:AddButton('🟢Dark Dex', function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ImMejor35/RBLX_Scripts/main/Universal/FixedDarkDex"))()
     end)
-	    local MyButton = RightGroupBox:AddButton('🟢Reviz Admin', function()
-		 loadstring(game:HttpGet(('https://pastebin.com/raw/pyzjWNhk'),true))()
-    end)
 	    local MyButton = RightGroupBox:AddButton('🟢Cmd X', function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
     end)
 	    local MyButton = RightGroupBox:AddButton('🟢Fates Admin', function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
-    end)
-	    local MyButton = RightGroupBox:AddButton('🟢R6 Admin', function()
-		loadstring(game:HttpGet("https://pastebin.com/raw/CKbPg9NC", true))()
-    end)
-	    local MyButton = RightGroupBox:AddButton('🟢Fe Animation (Useless But Cool)', function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/RubyBoo4life/Scripts/main/animations.vis'))()
     end)
     
     local LeftGroupBox = Tabs.PSX:AddLeftGroupbox('------- Pet Simulator X ---------')
@@ -582,7 +1159,7 @@ LeftGroupBox:AddDivider()
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V1.2.6ab Winning') -- Set WaterMark To Public If V5
+    Library:SetWatermark('Darkware V1.2.8ab Winning') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
