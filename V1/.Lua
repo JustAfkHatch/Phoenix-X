@@ -10,7 +10,7 @@
     local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
     local Window = Library:CreateWindow({
 
-        Title = 'Phoneix X -- V1.3ab',
+        Title = 'Phoenix X -- V1.3ab',
         Center = true, 
         AutoShow = true,
     })
@@ -89,8 +89,48 @@
     local MyButton = LeftGroupBox:AddButton('🟢Fuzki Library', function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/UI-Librarys/main/Fuzki%20UI",true))()
     end)
-    local MyButton = LeftGroupBox:AddButton('🟢Lop UI Library', function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/UI-Librarys/main/Lop",true))()
+    local MyButton = LeftGroupBox:AddButton('🟢DarkHub Library', function()
+	local DarkLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/dark"))() 
+	local WindowOne = DarkLib:Window() -- Makes Window
+
+	local TabOne = WindowOne:Tab("Your Fucking Text!") -- Makes Tab
+	local TabTwo = WindowOne:Tab("Your Text") -- Makes Tab
+	local TabThree = WindowOne:Tab("Your Text") -- Makes Tab
+	local TabFour = WindowOne:Tab("Your Text") -- Makes Tab
+	local TabFive = WindowOne:Tab("Your Text") -- Makes Tab
+	local TabSix = WindowOne:Tab("Your Text") -- Makes Tab
+	local TabSeven = WindowOne:Tab("Your Text") -- Makes Tab
+	local TabEight = WindowOne:Tab("Your Text") -- Makes Tab
+
+
+
+
+
+
+	TabOne:Button("Porn Hub Video 1", function() -- Makes Button
+	    --Button
+	    end)
+
+	TabOne:Toggle("Toggle", function()
+	    --Toggle
+	    end)
+	TabOne:Slider("Slider", 0, 50, function()
+	    --Slider
+	    end)
+
+
+
+	--TabOne:Colorpicker("Color Picker", preset, callback)
+
+	TabOne:Textbox("Text Box", "disapper", function()
+	    --Text Box
+	    end)
+
+	TabOne:Label("Label")
+
+	TabOne:Dropdown("DropDown", list, callback)
+
+	TabOne:Keybind("KeyBind", G, callback)
     end)
     local MyButton = LeftGroupBox:AddButton('🟢Flux-library', function()
 		loadstring(game:HttpGet("https://garfieldscripts.xyz/ui-libs/flux-lib-example.lua",true))()
@@ -233,7 +273,7 @@
     local MyButton = RightGroupBox:AddButton('🟢Phoneix X Library', function()
 	local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Kavo-Ui/main/Darkrai%20Ui", true))()
 
-    local Library = DarkraiX:Window("Phoneix X","Game here!","",Enum.KeyCode.RightControl);
+    local Library = DarkraiX:Window("Phoenix X","Game here!","",Enum.KeyCode.RightControl);
 
     --[[
     DarkraiX:Window(
@@ -315,7 +355,7 @@
     local MyButton = RightGroupBox:AddButton('🟢Ocerium Library', function()
 	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/slf0Dev/Ocerium_Project/main/Library.lua"))()
 
-    Window = Library.Main("Phoneix X","LeftAlt") -- change "LeftAlt" to key that you want will hide gui
+    Window = Library.Main("Phoenix X","LeftAlt") -- change "LeftAlt" to key that you want will hide gui
 
     --//tab
     local Tab = Window.NewTab("Aimbot")
@@ -549,7 +589,7 @@
     local MyButton = RightGroupBox:AddButton('🟢Nightmare Library', function()
 		local Fun = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/nightmares.fun-UI-Library/main/source.lua"))()
 
-    local window = Fun.Create("UI Library")
+    local window = Fun.Create("Phoenix X")
 
     local tab = window:Tab("Leak")
 
@@ -678,6 +718,9 @@
     Page:line() -- ห้ามนำไปแจกต่อนะจ๊ะ XD
     end)
     MyButton:AddTooltip('Go to my discord to make your own!')
+    local MyButton = RightGroupBox:AddButton('🟢Lop UI Library', function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/UI-Librarys/main/Lop",true))()
+    end)
     local MyButton = RightGroupBox:AddButton('🟢Discord Library', function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/UI-Librarys/main/Discord%20Lib",true))()
     end)
@@ -1194,7 +1237,7 @@ LeftGroupBox:AddDivider()
         local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
         local Window = Library:CreateWindow({
     
-            Title = 'Darkware -- JailBreak!',
+            Title = 'Phoenix X -- JailBreak!',
             Center = true, 
             AutoShow = true,
         })
@@ -1282,7 +1325,7 @@ LeftGroupBox:AddDivider()
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V1 On Top') -- Set WaterMark To Public If V5
+    Library:SetWatermark('Phoenix X V1 On Top') -- Set WaterMark To Public If V5
 	
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -1318,7 +1361,7 @@ end
         local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
         local Window = Library:CreateWindow({
     
-            Title = 'Darkware -- Mining Simulator 2!',
+            Title = 'Phoenix X -- Mining Simulator 2!',
             Center = true, 
             AutoShow = true,
         })
@@ -1414,7 +1457,7 @@ end
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V1 On Top') -- Set WaterMark To Public If V5
+    Library:SetWatermark('Phoenix X V1 On Top') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -1526,7 +1569,7 @@ end
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V1 On Top') -- Set WaterMark To Public If V5
+    Library:SetWatermark('Phoenix X V1 On Top') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -1642,7 +1685,7 @@ end
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V1 On Top') -- Set WaterMark To Public If V5
+    Library:SetWatermark('Phoenix X V1 On Top') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -1784,7 +1827,7 @@ end)
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V1 Arsenal') -- Set WaterMark To Public If V5
+    Library:SetWatermark('Phoenix X V1 Arsenal') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -2094,7 +2137,7 @@ end
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V1 BloxFruits') -- Set WaterMark To Public If V5
+    Library:SetWatermark('Phoenix X V1 BloxFruits') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -2130,7 +2173,7 @@ end
         local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
         local Window = Library:CreateWindow({
     
-            Title = 'Darkware -- Build A Boat For Treasure',
+            Title = 'Phoenix X -- Build A Boat For Treasure',
             Center = true, 
             AutoShow = true,
         })
@@ -2261,7 +2304,7 @@ end
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V1 BABFT') -- Set WaterMark To Public If V5
+    Library:SetWatermark('Phoenix X V1 BABFT') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -2339,7 +2382,7 @@ end
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V1 Mm2') -- Set WaterMark To Public If V5
+    Library:SetWatermark('Phoenix X V1 Mm2') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -2375,7 +2418,7 @@ if game.PlaceId == 142823291 then
     local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
     local Window = Library:CreateWindow({
 
-        Title = 'Darkware -- Bee Swarm Simulator',
+        Title = 'Phoenix X -- Bee Swarm Simulator',
         Center = true, 
         AutoShow = true,
     })
@@ -2452,7 +2495,7 @@ end
         local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
         local Window = Library:CreateWindow({
     
-            Title = 'Darkware -- Da Hood',
+            Title = 'Phoenix X -- Da Hood',
             Center = true, 
             AutoShow = true,
         })
@@ -2594,7 +2637,7 @@ end)
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Darkware V1 Da hood') -- Set WaterMark To Public If V5
+    Library:SetWatermark('Phoenix X V1:Da hood') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
