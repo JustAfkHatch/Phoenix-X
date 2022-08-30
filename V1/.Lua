@@ -1,4 +1,6 @@
-    -- DarkWare V1.3ab Updated 8/28/22
+    -- DarkWare V1.3.2ab Updated 8/29/22
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAfkHatch/Notification/main/.Lua",true))()
 
     repeat task.wait() until game:IsLoaded()
     local is_executor_closure = is_syn_closure or is_fluxus_closure or is_krnl_closure 
@@ -10,7 +12,7 @@
     local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
     local Window = Library:CreateWindow({
 
-        Title = 'Phoenix X -- V1.3ab',
+        Title = 'Phoenix X -- V1.3.2ab',
         Center = true, 
         AutoShow = true,
     })
@@ -26,15 +28,28 @@
     }
     local LeftGroupBox = Tabs.Changelogs:AddLeftGroupbox('Changelogs')
     LeftGroupBox:AddLabel('For All The Scripts!')
-    LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development 🔴 Patched!')
-    LeftGroupBox:AddLabel('🟡 Buggy/Glitchy!')
+    LeftGroupBox:AddLabel('🟢 Working! 🟠 In Development')
+    LeftGroupBox:AddLabel('🔴 Patched! 🟡 Buggy/Glitchy!')
     LeftGroupBox:AddLabel('---------------------------------')
-    LeftGroupBox:AddLabel('Huge Changes 1.3ab')
-    LeftGroupBox:AddLabel('(+) Add Some Stuff and Removed Some Stuff')
-    LeftGroupBox:AddLabel('(+) Added UI Libraries, Might have to double click to get it!')
+    LeftGroupBox:AddLabel('Whats New? Lets Check Together!')
+    LeftGroupBox:AddDropdown('Click Me!', {
+        Values = { 'Moved Some Stuff!', 'Added New Stuff!', '1 New Library!', 'Adding More Scripts To GameHub!', 'New Notifications!'},
+        Default = 1,
+        Multi = false,
+    
+        Text = 'Shall We? Also Check it out!',
+        Tooltip = 'This is New!',
+    })    
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10749620905", Duration = 5})
-        setclipboard("https://discord.gg/R6y3fdvA")
+    local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+    local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+    Notification:Notify(
+    {Title = "Notification!", Description = "Paste My Discord Server Into Your Browser!"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+    )
+    setclipboard("https://discord.gg/R6y3fdvA")
     end)
 
 	local LeftGroupBox = Tabs.Misc:AddLeftGroupbox('---------- Libraries ------------')
@@ -134,6 +149,9 @@
     end)
     local MyButton = LeftGroupBox:AddButton('🟢Flux-library', function()
 		loadstring(game:HttpGet("https://garfieldscripts.xyz/ui-libs/flux-lib-example.lua",true))()
+    end)
+    local MyButton = LeftGroupBox:AddButton('🟢Rivers Hub Library', function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAfkHatch/Rivers-Hub/Roblox_Script/Library/.Lua",true))()
     end)
     local RightGroupBox = Tabs.Misc:AddRightGroupbox('---------- Universal ------------')
     local MyButton = RightGroupBox:AddButton('🟢InfiniX Library', function()
@@ -753,10 +771,16 @@
     
     local LeftGroupBox = Tabs.PSX:AddLeftGroupbox('------- Pet Simulator X ---------')
     local MyButton = LeftGroupBox:AddButton('🟢 TR1V5 Software', function()
-            Library:Unload()
-            wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "TR1V5 Key Is Copied!", Icon = "rbxassetid://10749620905", Duration = 5})
-	wait(0.5)
+    Library:Unload()
+    wait(0.70)
+    local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+    local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+    Notification:Notify(
+    {Title = "Notification!", Description = "Copied TR1V5 Key!"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+    )
         setclipboard("UwuuwlIIIIlIIIIl_6164871262816436247394884")
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/TR1V5/TR1V5-Software-V4/main/Games/Pet%20Simulator%20X"))()
     end)
@@ -764,14 +788,28 @@
         local MyButton = LeftGroupBox:AddButton('🟢Zeerox Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Zeerox Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+    local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+    Notification:Notify(
+    {Title = "Notification!", Description = "Executing Zeerox Hub!"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+    )
         loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
     end)
     MyButton:AddTooltip('The 2nd Best Features For PSX')
     local MyButton = LeftGroupBox:AddButton('🟢Huge Games', function()
         Library:Unload()
         wait(0.70)
-    game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Huge Games!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing 🟢Huge Games!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
     getgenv().AuthKey="HUGE_wDp2O6304GTlCH0n"
     getgenv().LoadSettings={
     UseSeperateSaves=false
@@ -782,168 +820,337 @@ end)
     local MyButton = LeftGroupBox:AddButton('🟢Luna Hub', function()
         Library:Unload()
         wait(0.70)
-    game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Luna Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing Luna Hub!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
 	loadstring(game:HttpGetAsync("https://lunahub.cf/Loader.lua", true))()
 end)
     MyButton:AddTooltip('This has premium for its script and you can get premium features')
     local MyButton = LeftGroupBox:AddButton('🟢HoHo Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing HoHo Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing HoHo Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
     end)
     MyButton:AddTooltip('No Key System And Works Great For PSX')
     local MyButton2 = MyButton:AddButton('🟢Shiny Tool', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Shiny Tool!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Shiny Tool!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/XLinestX/Shiny-Tool/main/ShinyTool.lua"))()
     end)
     MyButton2:AddTooltip('ShinyTool Is Updated Working Great But Has A Key System Link')
     local MyButton = LeftGroupBox:AddButton('🟢Strike Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Strike Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Strike Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet('https://raw.githubusercontent.com/DEV-TK02/StrikeHub/main/Loader'))()
     end)
     MyButton:AddTooltip('This Has a Key!')
     local MyButton2 = MyButton:AddButton('🟢Ghost Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Ghost Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Ghost Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptRUs/Ryans/main/Ghosthub.lua"))()
     end)
     MyButton2:AddTooltip('Working Script Obivously')
     local MyButton = LeftGroupBox:AddButton('🟢Vestra Hub V5', function()
             Library:Unload()
             wait(0.70)
-	getgenv().key = "Vstra.V5_54bc5957372626cg"
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/xandudiscord/vestra/main/loader.lua"))()
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Vestra V5 Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
+            getgenv().key = "Vstra.V5_54bc5957372626cg"
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/xandudiscord/vestra/main/loader.lua"))()
     end)
     MyButton:AddTooltip('This Script Has a Custom UI With Multiple Codes Working But It Also Has A Key System')
     local MyButton2 = MyButton:AddButton('🟢Pet Sim X', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Pet Sim X!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Pet Sim X!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:GetObjects("rbxassetid://8194485654")[1].Source)("Petsi-X")
     end)
     MyButton2:AddTooltip('A Working Script')
     local MyButton2 = MyButton:AddButton('🟢Void Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Void Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Void Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Wind596/VoidHub/main/WiningDediy", true))()
     end)
     MyButton2:AddTooltip('A Working Script')
     local MyButton = LeftGroupBox:AddButton('🟢BK', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing BK!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing BK Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/BLACKGAMER1221/Pet-Simulator-X/main/BK%20Pet.lua"))()
     end)
     MyButton:AddTooltip('This Has The Best Coding And Everything Works Almost Fine!')
     local MyButton2 = MyButton:AddButton('🟢Black trip', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Black trip!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Black Trip!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://pastebin.com/raw/BdvUGb2q"))()
     end)
     MyButton2:AddTooltip('A Working Script')
     local MyButton = LeftGroupBox:AddButton('🟢Thunder Z', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Thunder Z!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Thunder Z!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://robloxhubop.ml/raw/leranebimu"))()
     end)
     MyButton:AddTooltip('This Has A Key System But You Needa Help The Owner Create Updates!')
     local MyButton2 = MyButton:AddButton('🟢 Dino Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Dino Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Dino Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/script/main/psx'))()
     end)
     MyButton2:AddTooltip('A Working Script')
     local MyButton = LeftGroupBox:AddButton('🟢Phantom Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Phantom Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Phantom Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/destylol/masterhubv311/itachi/Main.lua"))()
     end)
     MyButton:AddTooltip('No Key System And Also The Best Weird Devs INSANE RIGHT!')
     local MyButton2 = MyButton:AddButton('🟢 Plasma Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Plasma Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Plasma Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet('https://raw.githubusercontent.com/RubyBoo4life/Scripts/main/LOADER.vis'))()
     end)
     MyButton2:AddTooltip('A Working Script')
     local MyButton = LeftGroupBox:AddButton('🟢Project Meow', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Project Meow!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Project Meow!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet"https://raw.githubusercontent.com/L1ZOT/Neverlose/main/Project-Meow_TEMP")()
     end)
     MyButton:AddTooltip('You Will Need A Key But Still It has Great Features For PSX')
     local MyButton2 = MyButton:AddButton('🟢 Saza Hub V2', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Saza Hub V2!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Saza Hub V2!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet"https://raw.githubusercontent.com/QwertyzSZ/SazaSoftware/main/ScriptLoader.saza")()
     end)
     MyButton2:AddTooltip('Worst Script Since it lost all me Gems :( Also Has Key System link')
     local MyButton = LeftGroupBox:AddButton('🟢Kelp Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Kelp Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Kelp Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet('https://raw.githubusercontent.com/MaGiXxScripter/Cum-Hub/main/loader'))()
     end)
     MyButton:AddTooltip('You Will Need A Key But Still It has Great Features For PSX')
     local MyButton2 = MyButton:AddButton('🟢 Lunar Client', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Lunar Client!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Lunar Client!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://github.com/HazeNx/shimbo/raw/main/euphoria.lua"))()
     end)
     MyButton2:AddTooltip('A Working Script That dont has much features')
     local MyButton = LeftGroupBox:AddButton('🟢Smox Hub V2', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Smox Hub V2!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Smox Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet('https://raw.githubusercontent.com/SmoxHub/SmoxHub-V2/main/SmoxHub-V2'))()
     end)
     MyButton:AddTooltip('No Key System And Works Great For PSX')
     local MyButton2 = MyButton:AddButton('🟢Ez Pet', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Ez Pet!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Ez Pet!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TurfuGoldy/GoldenScripts/main/EzPets.lua"))()
     end)
     MyButton:AddTooltip('You Will Need A Key But Still It has Great Features For PSX')
-     local MyButton = LeftGroupBox:AddButton('🟢Extreme Hub', function()
+    local MyButton = LeftGroupBox:AddButton('🟢Extreme Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Extreme Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Extreme Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ExtremeAntonis/KeySystemUI/main/KeySystemUI-Obfuscated.lua"))()
     end)
     MyButton2:AddTooltip('You Will Need A Key But Still It has Great Features For PSX')
     local MyButton2 = MyButton:AddButton('🟢Moonlight Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Moonlight Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Moonlight Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet('https://cookie-hosting.xyz/Roblox/Moonlight/Loader.lua'))()
     end)
     MyButton:AddTooltip('No Key System And Works Great For PSX')
      local MyButton = LeftGroupBox:AddButton('🟢Ultra Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Ultra Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Ultra Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Ultra-Hub/main/Main"))()
     end)
     MyButton2:AddTooltip('No Key System And Works Great For PSX')
     local MyButton2 = MyButton:AddButton('🟢Galaxy Hub', function()
     Library:Unload()
     wait(0.70)
-    game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Galaxy Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+    local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+    local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+    Notification:Notify(
+    {Title = "Notification!", Description = "Executing Galaxy Hub!"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+    )
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MHD-444/Galaxy-Hub/main/Galaxy-Loader", true))()
     end)
     MyButton2:AddTooltip('Key System and Unknown To Support PSX Hardcore')
@@ -953,21 +1160,42 @@ end)
     local MyButton = LeftGroupBox:AddButton('🟢 Sape', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Sape!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Sape!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/vodxn/sape/main/Initiate.lua"))()
     end)
     MyButton:AddTooltip('Has the Same features as Vape But It had Multi Aura And Projectile Exploit Before Vape!')
     local MyButton2 = MyButton:AddButton('🟢 Vape', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Vape!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Vape!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
         MyButton2:AddTooltip('Updates More And Still has some better features coming soon aka Private Features')
     end)
 	local MyButton = LeftGroupBox:AddButton('🟢 EngoWare', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing EngoWare!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing EngoWare!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/joeengo/engoware/main/Main.lua"))()
     end)
     MyButton2:AddTooltip('Still Needs More Update to be good as Vape!')
@@ -985,29 +1213,57 @@ end)
     local MyButton = RightGroupBox:AddButton('🟢 Zeerox Hub', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Zeerox Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing Zeerox Hub!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
     end)
     MyButton:AddTooltip('Best Features')
     local MyButton = RightGroupBox:AddButton('🟢 System Exodus', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing System Exodus!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing System Exodus!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         loadstring(game:HttpGet("https://system-exodus.com/scripts/MiningSimulator/MiningSimulator2.lua", true))()
     end)
     MyButton:AddTooltip('Best Features')
     local MyButton = RightGroupBox:AddButton('🟢 Vestra Hub', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Vestra Hub!", Icon = "rbxassetid://10749620905", Duration = 5}) 
-        getgenv().key = "Vstra.V5_73b395ff54e72348"
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/xandudiscord/vestra/main/loader.lua"))()
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing Vestra Hub!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
+        getgenv().key = "Vstra.V5_54bc5957372626cg"
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xandudiscord/vestra/main/loader.lua"))() 
     end)
     MyButton:AddTooltip('Best Features')
     local MyButton = RightGroupBox:AddButton('🟢 Huge Games', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Huge Games!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing Huge Games!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         getgenv().AuthKey="HUGE_wDp2O6304GTlCH0n"
         getgenv().LoadSettings={
         UseSeperateSaves=false
@@ -1018,14 +1274,28 @@ end)
     local MyButton = RightGroupBox:AddButton('🟢 Kelp Hub', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Kelp Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing Kelp Hub!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         loadstring(game:HttpGet('https://raw.githubusercontent.com/MaGiXxScripter/Cum-Hub/main/loader'))()
     end)
     MyButton:AddTooltip('Best Features')
     local MyButton = RightGroupBox:AddButton('🟠 TR1V5 Software', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "TR1V5 Key Copied!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing TR1V5 Software!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         setclipboard("UwuuwlIIIIlIIIIl_6164871262816436247394884")
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/TR1V5/TR1V5-Software-V4/main/Main"))()
     end)
@@ -1033,27 +1303,55 @@ end)
         local MyButton = RightGroupBox:AddButton('🟢Strike Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Strike Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Strike Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet('https://raw.githubusercontent.com/DEV-TK02/StrikeHub/main/Loader'))()
     end)
     MyButton:AddTooltip('This Has a Key!')
     local MyButton = RightGroupBox:AddButton('🟢 Saza Hub V2', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Saza Hub V2!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing Saza Hub V2!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         loadstring(game:HttpGet"https://raw.githubusercontent.com/QwertyzSZ/SazaSoftware/main/ScriptLoader.saza")()
     end)
     MyButton:AddTooltip('Best Features')
     local MyButton = RightGroupBox:AddButton('🟢 SoggyWare', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing SoggyWare!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing Soggyware!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         loadstring(game:HttpGet("https://soggyhubv2.vercel.app"))()
     end)
     MyButton:AddTooltip('Best Features')
     local RightGroupBox = Tabs.PSX:AddRightGroupbox('------- Speed Of Legends --------')
     local MyButton = RightGroupBox:AddButton('🟠TR1V5 Software', function()
-            game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "TR1V5 Key Copied!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing TR1V5 Software!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         setclipboard("UwuuwlIIIIlIIIIl_6164871262816436247394884")
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/TR1V5/TR1V5-Software-V4/main/Main"))()
     end)
@@ -1157,7 +1455,14 @@ LeftGroupBox:AddDivider()
 	MyButton:AddTooltip('500 Wins Per But Key!!')
     local RightGroupBox = Tabs.SH:AddRightGroupbox('------------ Break In -----------')
     local MyButton = RightGroupBox:AddButton('🟠TR1V5 Software', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "TR1V5 Key Copied!", Icon = "rbxassetid://10470552407", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing TR1V5 Software!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         setclipboard("UwuuwlIIIIlIIIIl_6164871262816436247394884")
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/TR1V5/TR1V5-Software-V4/main/Main"))()
     end)
@@ -1202,7 +1507,7 @@ LeftGroupBox:AddDivider()
     Library:SetWatermarkVisibility(true)
 
     -- Sets the watermark text
-    Library:SetWatermark('Phoenix X V1.3ab Winning') -- Set WaterMark To Public If V5
+    Library:SetWatermark('Phoenix X V1.3.2ab Winning') -- Set WaterMark To Public If V5
 
     Library:OnUnload(function()
         Library.Unloaded = true
@@ -1254,7 +1559,14 @@ LeftGroupBox:AddDivider()
     LeftGroupBox:AddLabel('--------------------------------')
     LeftGroupBox:AddLabel('Small Changes V1')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Paste My Discord Server in your browser!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         setclipboard("https://discord.gg/R6y3fdvA")
     end)
 
@@ -1262,62 +1574,133 @@ LeftGroupBox:AddDivider()
     local MyButton = LeftGroupBox:AddButton('🟢Vynixus', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Vynixus!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Vynixus!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Jailbreak/Script.lua"))()
     end)
     local MyButton = LeftGroupBox:AddButton('🟢AutoFarm', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing JailBreak AutoFarm!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Autofarm!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/wawsdasdacx/ohascriptnrrewading/main/jbsaxcriptidk1"))();
     end)
     local MyButton = LeftGroupBox:AddButton('🟢Diamond Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Diamond Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Diamond Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxiYT/Diamond/main/JailBreak"))()
     end)
     local MyButton = LeftGroupBox:AddButton('🟢Weiny', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Weiny!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Weiny!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet('https://raw.githubusercontent.com/weiny-ez/w-main/main/jailbreak.lua'))()
     end)
     local MyButton = LeftGroupBox:AddButton('🟠TR1V5 Software', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing TR1V5 Software!", Icon = "rbxassetid://10749620905", Duration = 5})
-        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/TR1V5/TR1V5-Software-V4/main/Main"))()
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing TR1V5 Software!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
+            setclipboard("UwuuwlIIIIlIIIIl_6164871262816436247394884")
+            loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/TR1V5/TR1V5-Software-V4/main/Main"))()
     end)
     local MyButton = LeftGroupBox:AddButton('🟢Chaos Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Chaos Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Chaos Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xChaoticVoid/Chaos-Hub-v1/main/ChaosHub.lua"))()
     end)
     local MyButton = LeftGroupBox:AddButton('🟢VG Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing VG Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing VG Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
     end)
     local MyButton = LeftGroupBox:AddButton('🟢Blox Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Blox Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Blox Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxiYT/BloxHubFixed/main/MainCode2"))()
     end)
     MyButton:AddTooltip('Has Key System')
     local MyButton = LeftGroupBox:AddButton('🟢Cheesy Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Cheesy Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Cheesy Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/CheeseyMine/CheeseyHub/main/CheeseyHubV6"))()
     end)
-    local MyButton = LeftGroupBox:AddButton('🟢Monke Hub', function()
+    local MyButton = LeftGroupBox:AddButton('🟢Monkey Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Monke Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Monkey Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/JailMonkey.lua"))()
     end)
         -- Library functions
@@ -1378,37 +1761,72 @@ end
     LeftGroupBox:AddLabel('--------------------------------')
     LeftGroupBox:AddLabel('Small Changes V1')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Paste My Discord Server in your browser!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         setclipboard("https://discord.gg/R6y3fdvA")
     end)
 
     local LeftGroupBox = Tabs.MS2:AddLeftGroupbox('------- Mining Simulator 2 ------')
-    local MyButton = LeftGroupBox:AddButton('🟢 Zeerox', function()
+    local MyButton = LeftGroupBox:AddButton('🟢 Zeerox Hub', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Zeerox Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing Zeerox Hub!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
     end)
     MyButton:AddTooltip('Best Features')
     local MyButton = LeftGroupBox:AddButton('🟢 System Exodus', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing System Exodus!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing System Exodus!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         loadstring(game:HttpGet("https://system-exodus.com/scripts/MiningSimulator/MiningSimulator2.lua", true))()
     end)
     MyButton:AddTooltip('Best Features')
     local MyButton = LeftGroupBox:AddButton('🟢 Vestra Hub', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Vestra Hub!", Icon = "rbxassetid://10749620905", Duration = 5}) 
-        getgenv().key = "Vstra.V5_73b395ff54e72348"
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/xandudiscord/vestra/main/loader.lua"))()
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing Vestra Hub!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
+        getgenv().key = "Vstra.V5_54bc5957372626cg"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xandudiscord/vestra/main/loader.lua"))() 
     end)
     MyButton:AddTooltip('Best Features')
     local MyButton = LeftGroupBox:AddButton('🟢 Huge Games', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Huge Games!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing Huge Games!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         getgenv().AuthKey="HUGE_wDp2O6304GTlCH0n"
         getgenv().LoadSettings={
         UseSeperateSaves=false
@@ -1419,14 +1837,28 @@ end
     local MyButton = LeftGroupBox:AddButton('🟢 Kelp Hub', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Kelp Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing Kelp Hub!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         loadstring(game:HttpGet('https://raw.githubusercontent.com/MaGiXxScripter/Cum-Hub/main/loader'))()
     end)
     MyButton:AddTooltip('Best Features')
     local MyButton = LeftGroupBox:AddButton('🟠 TR1V5 Software', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "TR1V5 Key Copied!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing TR1V5 Software!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         setclipboard("UwuuwlIIIIlIIIIl_6164871262816436247394884")
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/TR1V5/TR1V5-Software-V4/main/Main"))()
     end)
@@ -1434,21 +1866,42 @@ end
         local MyButton = LeftGroupBox:AddButton('🟢Strike Hub', function()
             Library:Unload()
             wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Strike Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing Strike Hub!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
         loadstring(game:HttpGet('https://raw.githubusercontent.com/DEV-TK02/StrikeHub/main/Loader'))()
     end)
     MyButton:AddTooltip('This Has a Key!')
     local MyButton = LeftGroupBox:AddButton('🟢 Saza Hub V2', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Saza Hub V2!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing Saza Hub V2!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         loadstring(game:HttpGet"https://raw.githubusercontent.com/QwertyzSZ/SazaSoftware/main/ScriptLoader.saza")()
     end)
     MyButton:AddTooltip('Best Features')
     local MyButton = LeftGroupBox:AddButton('🟢 SoggyWare', function()
         Library:Unload()
         wait(0.70)
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing SoggyWare!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing SoggyWare!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         loadstring(game:HttpGet("https://soggyhubv2.vercel.app"))()
     end)
     MyButton:AddTooltip('Best Features')
@@ -1493,7 +1946,7 @@ end
     local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
     local Window = Library:CreateWindow({
 
-        Title = 'Darkware -- Clicker Simulator!',
+        Title = 'Phoenix X -- Clicker Simulator!',
         Center = true, 
         AutoShow = true,
     })
@@ -1511,7 +1964,14 @@ end
     LeftGroupBox:AddLabel('Small Changes V1')
     LeftGroupBox:AddLabel('(+) Added Wheat Hub')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Paste My Discord Server in your browser!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         setclipboard("https://discord.gg/R6y3fdvA")
     end)
 
@@ -1530,12 +1990,19 @@ end
     end)
     MyButton:AddTooltip('Great Features')
     local MyButton = LeftGroupBox:AddButton('🟢 Vestra Hub V5', function()
-        getgenv().key = "Vstra.V5_73b395ff54e72348"
+        getgenv().key = "Vstra.V5_54bc5957372626cg"
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xandudiscord/vestra/main/loader.lua"))()
     end)
     MyButton:AddTooltip('Great Features')
     local MyButton = LeftGroupBox:AddButton('🟢Wheat Hub (New -- Key)', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste The Discord Server Into your Browser!", Icon = "rbxassetid://10470552407", Duration = 5})
+    local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+    local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+    Notification:Notify(
+    {Title = "Notification!", Description = "Paste This Discord Server in your browser!"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+    )
         setclipboard("https://discord.gg/wsbyxxCQuW")
         loadstring(game:HttpGet("https://WheatHub.kelprepl.repl.co/main"))()
     end)
@@ -1623,7 +2090,14 @@ end
     LeftGroupBox:AddLabel('Small Changes V5')
     LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Paste My Discord Server in your browser!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         setclipboard("https://discord.gg/R6y3fdvA")
     end)
 
@@ -1637,7 +2111,14 @@ end
     end)
     MyButton:AddTooltip('One Of The Best Script Out Of All Scripts')
     local MyButton = LeftGroupBox:AddButton('🟠 TR1V5 Software', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "TR1V5 Key Copied!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing TR1V5 Software!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         setclipboard("UwuuwlIIIIlIIIIl_6164871262816436247394884")
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/TR1V5/TR1V5-Software-V4/main/Main"))()
     end)
@@ -1659,7 +2140,7 @@ end
     end)
     MyButton:AddTooltip('One Of The Best PF Script')
     local MyButton = LeftGroupBox:AddButton('🟢 Vestra Hub V5', function()
-        getgenv().key = "Vstra.V5_73b395ff54e72348"
+        getgenv().key = "Vstra.V5_54bc5957372626cg"
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xandudiscord/vestra/main/loader.lua"))()
     end)
     MyButton:AddTooltip('One Of The Best PF Script')
@@ -1740,15 +2221,29 @@ end
     LeftGroupBox:AddLabel('Small Changes V1')
     LeftGroupBox:AddLabel('(+) Added Luna Hub')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Paste My Discord Server in your Broswer!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         setclipboard("https://discord.gg/R6y3fdvA")
     end)
 
     local LeftGroupBox = Tabs.Arsenal:AddLeftGroupbox('Arsenal')
 	    local MyButton = LeftGroupBox:AddButton('🔴 TR1V5 Software', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "TR1V5 Key Copied!", Icon = "rbxassetid://10749620905", Duration = 5})
-        setclipboard("UwuuwlIIIIlIIIIl_6164871262816436247394884")
-        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/TR1V5/TR1V5-Software-V4/main/Main"))()
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Executing TR1V5 Software!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
+            setclipboard("UwuuwlIIIIlIIIIl_6164871262816436247394884")
+            loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/TR1V5/TR1V5-Software-V4/main/Main"))()
     end)
     MyButton:AddTooltip('One Of The Best Scripts')
     local MyButton = LeftGroupBox:AddButton('🟢 GodMode', function()
@@ -1758,7 +2253,14 @@ end
 	    local MyButton = LeftGroupBox:AddButton('🟢Luna Hub', function()
         Library:Unload()
         wait(0.70)
-    game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Executing Luna Hub!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing Luna Hub!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
 	loadstring(game:HttpGetAsync("https://lunahub.cf/Loader.lua", true))()
 end)
     MyButton:AddTooltip('This has premium for its script and you can get premium features')
@@ -1787,7 +2289,14 @@ end)
     end)
     MyButton:AddTooltip('One Of The Best Scripts')
     local MyButton = LeftGroupBox:AddButton('🟡 Cerberus', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste This Discord Server Into your Browser!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing Cerberus!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         setclipboard("https://discord.gg/jwxmTpzu6k")
         loadstring(game:HttpGet("https://raw.githubusercontent.com/0xd5f/CERBERUS/main/CERBERUS.lua", true))()
     end)
@@ -1805,7 +2314,7 @@ end)
     end)
     MyButton:AddTooltip('One Of The Best PF Script')
     local MyButton = LeftGroupBox:AddButton('🟢 Vestra Hub V5', function()
-        getgenv().key = "Vstra.V5_73b395ff54e72348"
+        getgenv().key = "Vstra.V5_54bc5957372626cg"
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xandudiscord/vestra/main/loader.lua"))()
     end)
     MyButton:AddTooltip('One Of The Best PF Script')
@@ -1881,7 +2390,14 @@ end
     LeftGroupBox:AddLabel('Small Changes V1')
 	    LeftGroupBox:AddLabel('No More Scripts For this sorry!')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Paste My Discord Server in your Broswer!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         setclipboard("https://discord.gg/R6y3fdvA")
     end)
 
@@ -2191,7 +2707,14 @@ end
         LeftGroupBox:AddLabel('Small Changes V1')
         LeftGroupBox:AddLabel('(+) Added 2 New Scripts Removed Not Working Ones')
         local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
-            game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Paste My Discord Server in your Broswer!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
             setclipboard("https://discord.gg/R6y3fdvA")
         end)
 
@@ -2203,7 +2726,7 @@ end
         loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
     end)
     local MyButton = LeftGroupBox:AddButton('🟢Vestra Hub V5', function()
-            getgenv().key = "Vstra.V5_73b395ff54e72348"
+        getgenv().key = "Vstra.V5_54bc5957372626cg"
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xandudiscord/vestra/main/loader.lua"))()
     end)
     local MyButton = LeftGroupBox:AddButton('🟢Project Meow', function()
@@ -2358,7 +2881,14 @@ end
         LeftGroupBox:AddLabel('Small Changes V1')
         LeftGroupBox:AddLabel('(+) ???')
         local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
-            game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Paste My Discord Server in your Broswer!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
             setclipboard("https://discord.gg/R6y3fdvA")
         end)
 
@@ -2367,6 +2897,15 @@ end
         loadstring(game:HttpGet('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/EclipseMM2', true))()
     end)
     local MyButton = LeftGroupBox:AddButton('🟠TR1V5 Software', function()
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Executing TR1V5 Software!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
+        setclipboard("UwuuwlIIIIlIIIIl_6164871262816436247394884")
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/TR1V5/TR1V5-Software-V4/main/Main"))()
     end)
     local MyButton = LeftGroupBox:AddButton('🟢XennyWare', function()
@@ -2437,7 +2976,14 @@ if game.PlaceId == 142823291 then
     LeftGroupBox:AddLabel('(+) New Section!')
     LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
     local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
-        game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10749620905", Duration = 5})
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+    
+        Notification:Notify(
+        {Title = "Notification!", Description = "Paste My Discord Server in your Broswer!"},
+        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
         setclipboard("https://discord.gg/R6y3fdvA")
     end)
     local LeftGroupBox = Tabs.BSS:AddLeftGroupbox('----- Bee Swarm Simulator -----')
@@ -2513,7 +3059,14 @@ end
         LeftGroupBox:AddLabel('Small Changes V1')
         LeftGroupBox:AddLabel('(+) Added Discord My Server,Its Below this message')
         local MyButton = LeftGroupBox:AddButton('My Discord Server', function()
-            game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Paste My Discord Server Into your Browser!", Icon = "rbxassetid://10749620905", Duration = 5})
+            local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+            local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+            Notification:Notify(
+            {Title = "Notification!", Description = "Paste My Discord Server in your Broswer!"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+            )
             setclipboard("https://discord.gg/R6y3fdvA")
         end)
 
